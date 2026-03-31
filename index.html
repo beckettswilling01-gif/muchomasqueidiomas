@@ -25,8 +25,8 @@
 
     /* ── Tokens ── */
     :root {
-      --gold:   #C9A227;
-      --gold-lt:#E0B840;
+      --gold:   #F8E847;
+      --gold-lt:#FAEE6A;
       --dark:   #0D1321;
       --dark2:  #141C30;
       --cream:  #F7F2E6;
@@ -41,13 +41,13 @@
     .nav-link { color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.25s; letter-spacing: 0.01em; }
     .nav-link:hover { color: #fff; }
     .btn-gold {
-      background: var(--gold); color: #fff;
+      background: var(--gold); color: #0D1321;
       font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem;
       padding: 10px 22px; border-radius: 5px; text-decoration: none; letter-spacing: 0.02em;
       transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
       display: inline-block;
     }
-    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,162,39,0.35); }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(248,232,71,0.35); }
     .btn-gold-outline {
       background: transparent; color: #fff;
       font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem;
@@ -107,7 +107,7 @@
 
     /* ── Benefit check ── */
     .check-item { display: flex; align-items: flex-start; gap: 12px; }
-    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #D4AF37; box-shadow: 0 0 10px rgba(212,175,55,0.30); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; box-shadow: 0 0 10px rgba(248,232,71,0.30); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 
     /* ── Hero slideshow ── */
     .hero-slide {
@@ -149,15 +149,15 @@
       text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.3);
     }
     .hero-gold-glow {
-      text-shadow: 0 0 18px rgba(212,175,55,0.40), 0 0 40px rgba(212,175,55,0.20), 0 4px 24px rgba(0,0,0,0.30);
+      text-shadow: 0 0 18px rgba(248,232,71,0.40), 0 0 40px rgba(248,232,71,0.20), 0 4px 24px rgba(0,0,0,0.30);
     }
 
     /* ── Hero CTA buttons ── */
     .hero-cta-primary {
-      box-shadow: 0 6px 22px rgba(201,162,39,0.30), 0 2px 6px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 22px rgba(248,232,71,0.30), 0 2px 6px rgba(0,0,0,0.15);
     }
     .hero-cta-primary:hover {
-      box-shadow: 0 10px 30px rgba(201,162,39,0.45), 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 30px rgba(248,232,71,0.45), 0 2px 8px rgba(0,0,0,0.2);
     }
 
     /* ── Trust strip premium ── */
@@ -244,7 +244,7 @@
 
       <h1 class="hero-stagger hero-delay-2 text-white leading-tight mb-6 hero-headline" style="font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size: clamp(3rem, 6.2vw, 5rem); letter-spacing:-0.01em; -webkit-text-stroke: 0.4px rgba(255,255,255,0.6); filter: brightness(1.08);">
         Aprende el idioma.<br />
-        Vive la <em class="hero-gold-glow" style="color:#D4AF37; font-style:italic;">cultura.</em>
+        Vive la <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">cultura.</em>
       </h1>
 
       <p class="hero-stagger hero-delay-3 leading-relaxed mb-9" style="font-size:1.08rem; max-width:540px; color:rgba(255,255,255,0.75); line-height:1.75;">
@@ -254,7 +254,7 @@
       <p class="hero-stagger hero-delay-3" style="font-size:0.88rem; color:rgba(255,255,255,0.50); margin-bottom:2rem;">Primera clase sin compromiso · Plazas limitadas por grupo · Nuevos grupos en abril</p>
 
       <div class="hero-stagger hero-delay-4 flex flex-wrap gap-4">
-        <a href="#contacto" class="btn-gold hero-cta-primary" style="font-size:1rem; padding:17px 42px; border-radius:5px; background:#D4AF37;">
+        <a href="#contacto" class="btn-gold hero-cta-primary" style="font-size:1rem; padding:17px 42px; border-radius:5px; background:#F8E847;">
           Reserva tu clase de prueba gratuita →
         </a>
         <a href="#idiomas" class="btn-gold-outline" style="padding:15px 30px;">
@@ -266,11 +266,11 @@
       <div class="hero-stagger hero-delay-5 trust-strip mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 pt-7">
         <div class="flex items-center gap-2.5" style="color:rgba(255,255,255,0.80); font-size:0.9rem;">
           <div class="flex gap-0.5">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#F8E847"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#F8E847"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#F8E847"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#F8E847"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#F8E847"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <span class="font-semibold text-white">5.0</span> en Google
         </div>
@@ -391,7 +391,7 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center mb-12">
       <span class="section-tag">Resultados</span>
-      <h2 class="serif font-bold" style="font-size: clamp(1.8rem, 3vw, 2.5rem); color:var(--dark);">Una academia con <em class="hero-gold-glow" style="color:#D4AF37; font-style:italic;">resultados reales</em></h2>
+      <h2 class="serif font-bold" style="font-size: clamp(1.8rem, 3vw, 2.5rem); color:var(--dark);">Una academia con <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">resultados reales</em></h2>
     </div>
     <div class="grid grid-cols-3 md:grid-cols-5 gap-8 text-center">
       <div>
@@ -426,7 +426,7 @@
     <div class="text-center max-w-2xl mx-auto mb-14">
       <span class="section-tag">¿Por qué elegirnos?</span>
       <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem);">
-        Lo que nos hace <em class="hero-gold-glow" style="color:#D4AF37; font-style:italic;">diferentes</em>
+        Lo que nos hace <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">diferentes</em>
       </h2>
       <p class="mt-4 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
         En Madrid hay muchas academias de idiomas. Pero ninguna enseña como nosotros: donde la cultura es el método y la conversación real es el objetivo desde el primer día.
@@ -434,43 +434,43 @@
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="why-card">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(212,175,55,0.15); border:1px solid rgba(212,175,55,0.25);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         </div>
         <h3 class="text-white font-semibold mb-2">Hablas desde el primer día</h3>
         <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Nada de meses de gramática antes de abrir la boca. Aquí la conversación es el centro de cada clase, desde la primera sesión.</p>
       </div>
       <div class="why-card">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(212,175,55,0.15); border:1px solid rgba(212,175,55,0.25);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
         </div>
         <h3 class="text-white font-semibold mb-2">La cultura es el método</h3>
         <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Cine, música, gastronomía, literatura, debates. No usamos la cultura como decoración — es nuestra herramienta de enseñanza principal.</p>
       </div>
       <div class="why-card">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(212,175,55,0.15); border:1px solid rgba(212,175,55,0.25);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <h3 class="text-white font-semibold mb-2">Grupos de máximo 8 alumnos</h3>
         <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Tu profesor te conoce, sabe tus puntos fuertes y adapta cada clase. No eres un número — eres una persona con objetivos concretos.</p>
       </div>
       <div class="why-card">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(212,175,55,0.15); border:1px solid rgba(212,175,55,0.25);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3 class="text-white font-semibold mb-2">Profesores nativos y expertos</h3>
         <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Profesores nativos con formación en enseñanza de idiomas y pasión por transmitir su cultura. No cualquiera enseña aquí.</p>
       </div>
       <div class="why-card">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(212,175,55,0.15); border:1px solid rgba(212,175,55,0.25);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
         <h3 class="text-white font-semibold mb-2">Progreso visible y medible</h3>
         <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Evaluación de nivel inicial, seguimiento personalizado e informes de progreso. Sabes exactamente dónde estás y hacia dónde vas.</p>
       </div>
       <div class="why-card">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(212,175,55,0.15); border:1px solid rgba(212,175,55,0.25);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <h3 class="text-white font-semibold mb-2">En el centro de Madrid</h3>
         <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Bien comunicada por metro, bus y Cercanías. Para que el idioma encaje en tu vida, no al revés.</p>
@@ -639,7 +639,7 @@
       <div>
         <span class="section-tag">Metodología</span>
         <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(2rem, 4vw, 3.2rem);">
-          Más que clases.<br /><em class="hero-gold-glow" style="color:#D4AF37; font-style:italic;">Una experiencia real.</em>
+          Más que clases.<br /><em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">Una experiencia real.</em>
         </h2>
         <p class="mt-5 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
           Un idioma se aprende usándolo. Por eso nuestras clases se diseñan para que el alumno hable, escuche y piense en el idioma desde el primer día. No hay traducción. Hay inmersión.
@@ -697,7 +697,7 @@
     <div class="text-center max-w-2xl mx-auto mb-14">
       <span class="section-tag">Cultura &amp; Idioma</span>
       <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color:var(--dark);">
-        Aprendizaje a través<br />de la <em class="hero-gold-glow" style="color:#D4AF37; font-style:italic;">cultura</em>
+        Aprendizaje a través<br />de la <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">cultura</em>
       </h2>
       <p class="text-gray-500 leading-relaxed mt-4" style="font-size:0.97rem;">
         El idioma cobra vida cuando se aprende a través de experiencias reales. Así es como lo hacemos.
@@ -711,8 +711,8 @@
         <img src="movies.jpg" alt="Cine de autor y conversación" style="width:100%; height:320px; object-fit:cover; display:block;" />
         <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
         <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(212,175,55,0.20); border:1px solid rgba(212,175,55,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
           </div>
           <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Cine de autor</h3>
           <p class="text-gray-300 text-sm leading-relaxed">Películas originales, debates en el idioma y análisis cultural. El cine como ventana al idioma.</p>
@@ -724,8 +724,8 @@
         <img src="museum.jpg" alt="Salidas culturales por Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
         <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
         <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(212,175,55,0.20); border:1px solid rgba(212,175,55,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Salidas culturales</h3>
           <p class="text-gray-300 text-sm leading-relaxed">Museos, mercados y barrios históricos. Madrid como aula sin paredes para practicar el idioma.</p>
@@ -737,8 +737,8 @@
         <img src="gastronomy.jpg" alt="Gastronomía y conversación" style="width:100%; height:320px; object-fit:cover; display:block;" />
         <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
         <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(212,175,55,0.20); border:1px solid rgba(212,175,55,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
           <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Gastronomía</h3>
           <p class="text-gray-300 text-sm leading-relaxed">La comida como excusa para hablar, debatir y descubrir la cultura a través de todos los sentidos.</p>
@@ -750,8 +750,8 @@
         <img src="literature.jpg" alt="Música y literatura" style="width:100%; height:320px; object-fit:cover; display:block;" />
         <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
         <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(212,175,55,0.20); border:1px solid rgba(212,175,55,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
           </div>
           <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Música y literatura</h3>
           <p class="text-gray-300 text-sm leading-relaxed">Club de lectura, canciones y poesía. Aprende el idioma a través del arte y la expresión creativa.</p>
@@ -849,7 +849,7 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
       <div class="why-card">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(201,162,39,0.15);">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <h3 class="serif font-bold text-white text-lg mb-2">El equipo humano</h3>
@@ -857,7 +857,7 @@
       </div>
 
       <div class="why-card">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(201,162,39,0.15);">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
         </div>
         <h3 class="serif font-bold text-white text-lg mb-2">Enfoque cultural único</h3>
@@ -865,7 +865,7 @@
       </div>
 
       <div class="why-card">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(201,162,39,0.15);">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3 class="serif font-bold text-white text-lg mb-2">Grupos muy reducidos</h3>
@@ -873,7 +873,7 @@
       </div>
 
       <div class="why-card">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(201,162,39,0.15);">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <h3 class="serif font-bold text-white text-lg mb-2">Madrid como aula</h3>
@@ -881,15 +881,15 @@
       </div>
 
       <div class="why-card">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(201,162,39,0.15);">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <h3 class="serif font-bold text-white text-lg mb-2">Horarios flexibles</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">Mañanas, tardes y fines de semana. Diseña tu horario según tu ritmo de vida.</p>
+        <p class="text-gray-400 text-sm leading-relaxed">Mañanas y tardes. Diseña tu horario según tu ritmo de vida.</p>
       </div>
 
       <div class="why-card">
-        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(201,162,39,0.15);">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
         <h3 class="serif font-bold text-white text-lg mb-2">Progreso medible</h3>
@@ -899,6 +899,195 @@
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════
+     NUESTRO EQUIPO
+════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-white" style="overflow:hidden;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="section-tag">Nuestro equipo</span>
+      <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color:var(--dark);">
+        Las personas detrás de<br /><em style="color:var(--gold); font-style:italic;">tu aprendizaje</em>
+      </h2>
+      <p class="text-gray-500 leading-relaxed mt-4" style="font-size:0.97rem;">
+        Profesores nativos, apasionados por su cultura y comprometidos con tu progreso. Conócelos.
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Carousel container -->
+      <div id="team-carousel" class="flex gap-6 transition-transform duration-500 ease-in-out" style="will-change:transform;">
+
+        <!-- Romina -->
+        <div class="team-card flex-shrink-0" style="width:340px;">
+          <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border:1px solid #ede8de;">
+            <div style="height:340px; background:#f0ebe0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <img src="Romina_muchomasqueidiomas.jpg" alt="Romina — Directora y fundadora" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;width:100%;\' class=\'serif text-gray-400\' ><span style=\'font-size:3rem;\'>R</span></div>';" />
+            </div>
+            <div class="p-6">
+              <h3 class="serif font-bold text-lg mb-0.5" style="color:var(--dark);">Romina</h3>
+              <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Directora y fundadora</p>
+              <p class="text-gray-500 text-sm leading-relaxed" style="display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;">I am Italian and guilty of the fact that the academy you have just chosen exists. Born in Pistoia, I studied German, Spanish and English philology and art history in Pisa. After 8 years teaching Italian at the University of Göttingen, I moved to Madrid in 2011. I also spent a year in London with muchomasqueidiomas.com in the "Erasmus for Young Entrepreneurs" program.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lorenzo -->
+        <div class="team-card flex-shrink-0" style="width:340px;">
+          <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border:1px solid #ede8de;">
+            <div style="height:340px; background:#f0ebe0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <img src="IMG-20220706-WA0016_edited_edited.jpg" alt="Lorenzo — Profesor de italiano" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;width:100%;\' class=\'serif text-gray-400\' ><span style=\'font-size:3rem;\'>L</span></div>';" />
+            </div>
+            <div class="p-6">
+              <h3 class="serif font-bold text-lg mb-0.5" style="color:var(--dark);">Lorenzo</h3>
+              <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Profesor de italiano</p>
+              <p class="text-gray-500 text-sm leading-relaxed" style="display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;">Ciao! I am from Florence and my last name is Romano, so with me you can be sure that you will learn Italian language and culture from a 100% native! I studied Fine Arts and trained to teach Italian to foreigners with the official DITALS degree. Here in Madrid since 2011, my goal is for my students to have fun and enjoy class.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sarah -->
+        <div class="team-card flex-shrink-0" style="width:340px;">
+          <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border:1px solid #ede8de;">
+            <div style="height:340px; background:#f0ebe0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <img src="14037521_10154279616175631_1762065538_o.jpg" alt="Sarah — Profesora de francés" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;width:100%;\' class=\'serif text-gray-400\' ><span style=\'font-size:3rem;\'>S</span></div>';" />
+            </div>
+            <div class="p-6">
+              <h3 class="serif font-bold text-lg mb-0.5" style="color:var(--dark);">Sarah</h3>
+              <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Profesora de francés</p>
+              <p class="text-gray-500 text-sm leading-relaxed" style="display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;">Translator and French teacher for more than ten years. This dual role has allowed me to approach languages from different angles and to better understand some of the difficulties and subtleties of French, my mother tongue. Conversation, grammar, culture and current affairs — we can cover everything in class.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mon -->
+        <div class="team-card flex-shrink-0" style="width:340px;">
+          <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border:1px solid #ede8de;">
+            <div style="height:340px; background:#f0ebe0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <img src="PHOTO-2024-08-28-13-02-14.jpg" alt="Mon — Profesora de español" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;width:100%;\' class=\'serif text-gray-400\' ><span style=\'font-size:3rem;\'>M</span></div>';" />
+            </div>
+            <div class="p-6">
+              <h3 class="serif font-bold text-lg mb-0.5" style="color:var(--dark);">Mon</h3>
+              <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Profesora de español</p>
+              <p class="text-gray-500 text-sm leading-relaxed" style="display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;">A Galician in Madrid, historian, anthropologist and Spanish teacher. I am excited to learn new things and I love people, which helps me establish an affective and listening bond with my students. These are the fundamental bases for a calm, pleasant and unique learning process for each person.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filipa -->
+        <div class="team-card flex-shrink-0" style="width:340px;">
+          <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border:1px solid #ede8de;">
+            <div style="height:340px; background:#f0ebe0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <img src="Screenshot 2024-09-10 at 5.57_edited.jpg" alt="Filipa — Profesora de portugués" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;width:100%;\' class=\'serif text-gray-400\' ><span style=\'font-size:3rem;\'>F</span></div>';" />
+            </div>
+            <div class="p-6">
+              <h3 class="serif font-bold text-lg mb-0.5" style="color:var(--dark);">Filipa</h3>
+              <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Profesora de portugués</p>
+              <p class="text-gray-500 text-sm leading-relaxed" style="display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;">Portuguese, from Lisbon, teaching Portuguese for more than 15 years. I love languages and all the tools that help us communicate. I fall in love with teaching — it requires me to fully enter into the expectations of each student to create a training model tailored to their needs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ana -->
+        <div class="team-card flex-shrink-0" style="width:340px;">
+          <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border:1px solid #ede8de;">
+            <div style="height:340px; background:#f0ebe0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <img src="Ana Branco (Portuguese Teacher)_edited.jpg" alt="Ana — Profesora de portugués" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;width:100%;\' class=\'serif text-gray-400\' ><span style=\'font-size:3rem;\'>A</span></div>';" />
+            </div>
+            <div class="p-6">
+              <h3 class="serif font-bold text-lg mb-0.5" style="color:var(--dark);">Ana</h3>
+              <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Profesora de portugués</p>
+              <p class="text-gray-500 text-sm leading-relaxed" style="display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;">Portuguese architect with a Master's from the Polytechnic University of Madrid. Since 2017, I teach European Portuguese in companies, academies and NGOs. Since 2020, I prepare students for official level exams. My diverse background enriches my teaching approach.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laura -->
+        <div class="team-card flex-shrink-0" style="width:340px;">
+          <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border:1px solid #ede8de;">
+            <div style="height:340px; background:#f0ebe0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <img src="PHOTO-2024-09-30-14-12-04 (1).jpg" alt="Laura — Profesora de inglés" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;width:100%;\' class=\'serif text-gray-400\' ><span style=\'font-size:3rem;\'>L</span></div>';" />
+            </div>
+            <div class="p-6">
+              <h3 class="serif font-bold text-lg mb-0.5" style="color:var(--dark);">Laura</h3>
+              <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Profesora de inglés</p>
+              <p class="text-gray-500 text-sm leading-relaxed" style="display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;">Originally from Hull, Yorkshire. I've lived in Australia and Canada. As an enthusiastic English teacher, I am passionate about connecting with my students. I've visited 30 countries, enriching my understanding of different cultures. Teaching is not only about transmitting knowledge — it is meeting fascinating people.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation arrows -->
+      <button onclick="scrollTeam(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-11 h-11 rounded-full flex items-center justify-center z-10 hidden lg:flex" style="background:var(--dark); box-shadow:0 4px 16px rgba(13,19,33,0.20);" aria-label="Anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button onclick="scrollTeam(1)" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-11 h-11 rounded-full flex items-center justify-center z-10 hidden lg:flex" style="background:var(--dark); box-shadow:0 4px 16px rgba(13,19,33,0.20);" aria-label="Siguiente">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Dots indicator -->
+    <div class="flex justify-center gap-2 mt-8" id="team-dots"></div>
+  </div>
+</section>
+
+<script>
+(function() {
+  var carousel = document.getElementById('team-carousel');
+  var cards = carousel.querySelectorAll('.team-card');
+  var dotsContainer = document.getElementById('team-dots');
+  var currentIndex = 0;
+  var cardWidth = 340 + 24;
+
+  function getVisibleCards() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 640) return 2;
+    return 1;
+  }
+
+  function getMaxIndex() {
+    return Math.max(0, cards.length - getVisibleCards());
+  }
+
+  function updateCarousel() {
+    var maxIdx = getMaxIndex();
+    if (currentIndex > maxIdx) currentIndex = maxIdx;
+    carousel.style.transform = 'translateX(-' + (currentIndex * cardWidth) + 'px)';
+    updateDots();
+  }
+
+  function updateDots() {
+    var maxIdx = getMaxIndex();
+    dotsContainer.innerHTML = '';
+    for (var i = 0; i <= maxIdx; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'w-2.5 h-2.5 rounded-full transition-all';
+      dot.style.background = i === currentIndex ? 'var(--gold)' : '#d4d0c4';
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      (function(idx) { dot.onclick = function() { currentIndex = idx; updateCarousel(); }; })(i);
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  window.scrollTeam = function(dir) {
+    var maxIdx = getMaxIndex();
+    currentIndex = Math.max(0, Math.min(maxIdx, currentIndex + dir));
+    updateCarousel();
+  };
+
+  var startX = 0;
+  carousel.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', function(e) {
+    var diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) { scrollTeam(diff > 0 ? 1 : -1); }
+  }, { passive: true });
+
+  window.addEventListener('resize', updateCarousel);
+  updateCarousel();
+})();
+</script>
 
 <!-- ═══════════════════════════════════════
      EN EL CORAZÓN DE MADRID
@@ -1004,6 +1193,7 @@
               <option>Inglés</option>
               <option>Japonés</option>
               <option>Chino Mandarín</option>
+              <option>Coreano</option>
               <option>Árabe</option>
               <option>Alemán</option>
               <option>Portugués</option>
@@ -1077,7 +1267,11 @@
           <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Francés</a></li>
           <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Inglés</a></li>
           <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Japonés</a></li>
-          <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Chino · Árabe · Alemán</a></li>
+          <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Coreano</a></li>
+          <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Chino</a></li>
+          <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Árabe</a></li>
+          <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Alemán</a></li>
+          <li><a href="#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Portugués</a></li>
         </ul>
       </div>
 
@@ -1113,7 +1307,7 @@
     </div>
 
     <div class="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3" style="border-color:rgba(255,255,255,0.07);">
-      <p class="text-gray-600 text-xs">© 2025 Mucho Más Que Idiomas. Todos los derechos reservados.</p>
+      <p class="text-gray-600 text-xs">© 2026 Mucho Más Que Idiomas. Todos los derechos reservados.</p>
       <div class="flex gap-5">
         <a href="#" class="text-gray-600 text-xs hover:text-gray-400 transition-colors">Política de privacidad</a>
         <a href="#" class="text-gray-600 text-xs hover:text-gray-400 transition-colors">Aviso legal</a>
@@ -1201,7 +1395,7 @@
 </script>
 
 <!-- Sticky mobile CTA -->
-<div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-40 md:hidden" style="background:rgba(13,19,33,0.96); backdrop-filter:blur(12px); border-top:1px solid rgba(201,162,39,0.25); padding:12px 16px; transform:translateY(100%); transition:transform 0.35s ease;">
+<div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-40 md:hidden" style="background:rgba(13,19,33,0.96); backdrop-filter:blur(12px); border-top:1px solid rgba(248,232,71,0.25); padding:12px 16px; transform:translateY(100%); transition:transform 0.35s ease;">
   <div class="flex items-center justify-between gap-3">
     <div class="text-white text-xs leading-tight"><span class="font-semibold">Primera clase sin compromiso</span><br /><span style="color:rgba(255,255,255,0.55);">Plazas limitadas por grupo</span></div>
     <a href="#contacto" class="btn-gold flex-shrink-0" style="font-size:0.8rem; padding:10px 18px; white-space:nowrap;">Reservar prueba</a>

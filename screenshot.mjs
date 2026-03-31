@@ -17,7 +17,7 @@ const filename = label ? `screenshot-${next}-${label}.png` : `screenshot-${next}
 const filepath = path.join(dir, filename);
 
 const browser = await puppeteer.launch({
-  executablePath: 'C:/Users/nateh/.cache/puppeteer/chrome/win64-131.0.6778.204/chrome-win64/chrome.exe',
+  executablePath: 'C:/Users/becke/.cache/puppeteer/chrome/win64-146.0.7680.153/chrome-win64/chrome.exe',
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
 });
 
