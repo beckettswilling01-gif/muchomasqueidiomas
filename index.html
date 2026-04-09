@@ -47,7 +47,7 @@
       transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
       display: inline-block;
     }
-    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(248,232,71,0.35); }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(13,19,33,0.12); }
     .btn-gold-outline {
       background: transparent; color: #fff;
       font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem;
@@ -102,12 +102,13 @@
     /* ── Why card ── */
     .why-card {
       border-radius: 8px; padding: 24px 20px;
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10);
+      background: #fff; border: 1px solid #ede8de;
+      box-shadow: 0 2px 8px rgba(13,19,33,0.05);
     }
 
     /* ── Benefit check ── */
     .check-item { display: flex; align-items: flex-start; gap: 12px; }
-    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; box-shadow: 0 0 10px rgba(248,232,71,0.30); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 
     /* ── Hero slideshow ── */
     .hero-slide {
@@ -148,16 +149,14 @@
     .hero-headline {
       text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.3);
     }
-    .hero-gold-glow {
-      text-shadow: 0 0 18px rgba(248,232,71,0.40), 0 0 40px rgba(248,232,71,0.20), 0 4px 24px rgba(0,0,0,0.30);
-    }
+    .hero-gold-glow { }
 
     /* ── Hero CTA buttons ── */
     .hero-cta-primary {
-      box-shadow: 0 6px 22px rgba(248,232,71,0.30), 0 2px 6px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15), 0 2px 6px rgba(0,0,0,0.10);
     }
     .hero-cta-primary:hover {
-      box-shadow: 0 10px 30px rgba(248,232,71,0.45), 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.20), 0 2px 8px rgba(0,0,0,0.12);
     }
 
     /* ── Trust strip premium ── */
@@ -421,14 +420,14 @@
 <!-- ═══════════════════════════════════════
      WHY CHOOSE US
 ════════════════════════════════════════ -->
-<section class="py-20 lg:py-28" style="background:var(--dark);">
+<section class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center max-w-2xl mx-auto mb-14">
       <span class="section-tag">¿Por qué elegirnos?</span>
-      <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem);">
-        Lo que nos hace <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">diferentes</em>
+      <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); color:var(--dark);">
+        Lo que nos hace <em style="color:var(--gold); font-style:italic;">diferentes</em>
       </h2>
-      <p class="mt-4 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+      <p class="mt-4 text-gray-500 leading-relaxed" style="font-size:0.97rem;">
         En Madrid hay muchas academias de idiomas. Pero ninguna enseña como nosotros: donde la cultura es el método y la conversación real es el objetivo desde el primer día.
       </p>
     </div>
@@ -437,48 +436,48 @@
         <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         </div>
-        <h3 class="text-white font-semibold mb-2">Hablas desde el primer día</h3>
-        <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Nada de meses de gramática antes de abrir la boca. Aquí la conversación es el centro de cada clase, desde la primera sesión.</p>
+        <h3 class="font-semibold mb-2" style="color:var(--dark);">Hablas desde el primer día</h3>
+        <p class="text-gray-500" style="font-size:0.88rem; line-height:1.65;">Nada de meses de gramática antes de abrir la boca. Aquí la conversación es el centro de cada clase, desde la primera sesión.</p>
       </div>
       <div class="why-card">
         <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
         </div>
-        <h3 class="text-white font-semibold mb-2">La cultura es el método</h3>
-        <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Cine, música, gastronomía, literatura, debates. No usamos la cultura como decoración — es nuestra herramienta de enseñanza principal.</p>
+        <h3 class="font-semibold mb-2" style="color:var(--dark);">La cultura es el método</h3>
+        <p class="text-gray-500" style="font-size:0.88rem; line-height:1.65;">Cine, música, gastronomía, literatura, debates. No usamos la cultura como decoración — es nuestra herramienta de enseñanza principal.</p>
       </div>
       <div class="why-card">
         <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <h3 class="text-white font-semibold mb-2">Grupos de máximo 8 alumnos</h3>
-        <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Tu profesor te conoce, sabe tus puntos fuertes y adapta cada clase. No eres un número — eres una persona con objetivos concretos.</p>
+        <h3 class="font-semibold mb-2" style="color:var(--dark);">Grupos de máximo 8 alumnos</h3>
+        <p class="text-gray-500" style="font-size:0.88rem; line-height:1.65;">Tu profesor te conoce, sabe tus puntos fuertes y adapta cada clase. No eres un número — eres una persona con objetivos concretos.</p>
       </div>
       <div class="why-card">
         <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3 class="text-white font-semibold mb-2">Profesores nativos y expertos</h3>
-        <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Profesores nativos con formación en enseñanza de idiomas y pasión por transmitir su cultura. No cualquiera enseña aquí.</p>
+        <h3 class="font-semibold mb-2" style="color:var(--dark);">Profesores nativos y expertos</h3>
+        <p class="text-gray-500" style="font-size:0.88rem; line-height:1.65;">Profesores nativos con formación en enseñanza de idiomas y pasión por transmitir su cultura. No cualquiera enseña aquí.</p>
       </div>
       <div class="why-card">
         <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
-        <h3 class="text-white font-semibold mb-2">Progreso visible y medible</h3>
-        <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Evaluación de nivel inicial, seguimiento personalizado e informes de progreso. Sabes exactamente dónde estás y hacia dónde vas.</p>
+        <h3 class="font-semibold mb-2" style="color:var(--dark);">Progreso visible y medible</h3>
+        <p class="text-gray-500" style="font-size:0.88rem; line-height:1.65;">Evaluación de nivel inicial, seguimiento personalizado e informes de progreso. Sabes exactamente dónde estás y hacia dónde vas.</p>
       </div>
       <div class="why-card">
         <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
-        <h3 class="text-white font-semibold mb-2">En el centro de Madrid</h3>
-        <p style="color:rgba(255,255,255,0.55); font-size:0.88rem; line-height:1.65;">Bien comunicada por metro, bus y Cercanías. Para que el idioma encaje en tu vida, no al revés.</p>
+        <h3 class="font-semibold mb-2" style="color:var(--dark);">En el centro de Madrid</h3>
+        <p class="text-gray-500" style="font-size:0.88rem; line-height:1.65;">Bien comunicada por metro, bus y Cercanías. Para que el idioma encaje en tu vida, no al revés.</p>
       </div>
     </div>
     <div class="text-center mt-12">
       <a href="#contacto" class="btn-gold" style="font-size:0.95rem; padding:14px 32px;">Reserva tu clase de prueba gratuita →</a>
-      <p class="mt-3" style="font-size:0.8rem; color:rgba(255,255,255,0.40);">Sin compromiso · Te respondemos en menos de 24 h</p>
+      <p class="mt-3 text-gray-400" style="font-size:0.8rem;">Sin compromiso · Te respondemos en menos de 24 h</p>
     </div>
   </div>
 </section>
@@ -632,16 +631,16 @@
 <!-- ═══════════════════════════════════════
      MORE THAN CLASSES (DARK)
 ════════════════════════════════════════ -->
-<section id="metodologia" class="py-20 lg:py-28" style="background:var(--dark);">
+<section id="metodologia" class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
       <div>
         <span class="section-tag">Metodología</span>
-        <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(2rem, 4vw, 3.2rem);">
-          Más que clases.<br /><em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">Una experiencia real.</em>
+        <h2 class="serif font-bold leading-tight" style="font-size: clamp(2rem, 4vw, 3.2rem); color:var(--dark);">
+          Más que clases.<br /><em style="color:var(--gold); font-style:italic;">Una experiencia real.</em>
         </h2>
-        <p class="mt-5 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-5 text-gray-500 leading-relaxed" style="font-size:0.97rem;">
           Un idioma se aprende usándolo. Por eso nuestras clases se diseñan para que el alumno hable, escuche y piense en el idioma desde el primer día. No hay traducción. Hay inmersión.
         </p>
       </div>
@@ -650,36 +649,36 @@
         <div class="check-item">
           <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div>
-            <p class="text-white font-semibold text-sm">Conversación desde el primer día</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Sin miedo a equivocarse. El error es parte del aprendizaje.</p>
+            <p class="font-semibold text-sm" style="color:var(--dark);">Conversación desde el primer día</p>
+            <p class="text-gray-500 text-sm mt-0.5 leading-relaxed">Sin miedo a equivocarse. El error es parte del aprendizaje.</p>
           </div>
         </div>
         <div class="check-item">
           <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div>
-            <p class="text-white font-semibold text-sm">Gramática en contexto real</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">No memorizas reglas. Las descubres usándolas en situaciones reales.</p>
+            <p class="font-semibold text-sm" style="color:var(--dark);">Gramática en contexto real</p>
+            <p class="text-gray-500 text-sm mt-0.5 leading-relaxed">No memorizas reglas. Las descubres usándolas en situaciones reales.</p>
           </div>
         </div>
         <div class="check-item">
           <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div>
-            <p class="text-white font-semibold text-sm">Pronunciación y entonación auténtica</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Aprende a sonar como un nativo desde las primeras sesiones.</p>
+            <p class="font-semibold text-sm" style="color:var(--dark);">Pronunciación y entonación auténtica</p>
+            <p class="text-gray-500 text-sm mt-0.5 leading-relaxed">Aprende a sonar como un nativo desde las primeras sesiones.</p>
           </div>
         </div>
         <div class="check-item">
           <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div>
-            <p class="text-white font-semibold text-sm">Cultura integrada en cada lección</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Cine, música, gastronomía y arte: el idioma cobra vida.</p>
+            <p class="font-semibold text-sm" style="color:var(--dark);">Cultura integrada en cada lección</p>
+            <p class="text-gray-500 text-sm mt-0.5 leading-relaxed">Cine, música, gastronomía y arte: el idioma cobra vida.</p>
           </div>
         </div>
         <div class="check-item">
           <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div>
-            <p class="text-white font-semibold text-sm">Seguimiento personalizado</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Tu profesor conoce tu ritmo, tus metas y tu progreso real.</p>
+            <p class="font-semibold text-sm" style="color:var(--dark);">Seguimiento personalizado</p>
+            <p class="text-gray-500 text-sm mt-0.5 leading-relaxed">Tu profesor conoce tu ritmo, tus metas y tu progreso real.</p>
           </div>
         </div>
       </div>
@@ -704,57 +703,81 @@
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="space-y-16 lg:space-y-20">
 
-      <!-- Cine -->
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0006.jpg" alt="Cine de autor y conversación" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
+      <!-- Cine de autor -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0006.jpg" alt="Noche de cine en la academia" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
           </div>
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Cine de autor</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Películas originales, debates en el idioma y análisis cultural. El cine como ventana al idioma.</p>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Cine de autor</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">
+            Cada mes organizamos noches de cine en versión original. Vemos la película juntos, analizamos diálogos y debatimos en el idioma sobre lo que acabamos de ver. No es solo entretenimiento — es comprensión auditiva, vocabulario y expresión oral en contexto real.
+          </p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">
+            De Fellini a Koreeda, de Truffaut a Almodóvar — el cine como ventana a la cultura y al idioma.
+          </p>
         </div>
       </div>
 
       <!-- Salidas culturales -->
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0002.jpg" alt="Salidas culturales por Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0002.jpg" alt="Visita al museo con alumnos de la academia" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Salidas culturales</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Museos, mercados y barrios históricos. Madrid como aula sin paredes para practicar el idioma.</p>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Salidas culturales</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">
+            Madrid es nuestra aula sin paredes. Organizamos visitas a museos, paseos por barrios históricos y rutas culturales donde el idioma se practica en situaciones reales. Describir un cuadro en el Prado, negociar en un mercado o debatir en una terraza — todo cuenta como clase.
+          </p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">
+            El Prado, el Rastro, Malasaña, La Latina — cada rincón de Madrid se convierte en una lección.
+          </p>
         </div>
       </div>
 
       <!-- Gastronomía -->
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260408-WA0046.jpg" alt="Gastronomía y conversación" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260408-WA0046.jpg" alt="Taller de gastronomía en la academia" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Gastronomía</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">La comida como excusa para hablar, debatir y descubrir la cultura a través de todos los sentidos.</p>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Gastronomía</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">
+            La comida es cultura, y la cultura es idioma. En nuestros talleres gastronómicos, los alumnos cocinan recetas tradicionales mientras aprenden vocabulario culinario, debaten sobre tradiciones y descubren la cultura de cada país a través de todos los sentidos.
+          </p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">
+            Pasta fresca, tapas, sushi, dim sum — cada receta es una puerta de entrada al idioma.
+          </p>
         </div>
       </div>
 
       <!-- Música y literatura -->
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0019.jpg" alt="Música y literatura" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0019.jpg" alt="Clase de conversación en la academia" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background:rgba(248,232,71,0.15); border:1px solid rgba(248,232,71,0.25);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
           </div>
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Música y literatura</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Club de lectura, canciones y poesía. Aprende el idioma a través del arte y la expresión creativa.</p>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Música y literatura</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">
+            Club de lectura, análisis de canciones y tertulias sobre poesía. Leer un fragmento de un autor en su idioma original, escuchar una canción y descifrar su letra, debatir sobre un poema — son formas de aprender que conectan con la emoción y se quedan en la memoria.
+          </p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">
+            De Pessoa a Murakami, de Piaf a BTS — el arte como herramienta de aprendizaje.
+          </p>
         </div>
       </div>
 
@@ -1134,37 +1157,37 @@
 <!-- ═══════════════════════════════════════
      FINAL CTA (DARK)
 ════════════════════════════════════════ -->
-<section id="contacto" class="py-20 lg:py-28" style="background:var(--dark);">
+<section id="contacto" class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
       <div>
         <span class="section-tag" style="color:var(--gold);">Tu primera clase es sin compromiso</span>
-        <h2 class="serif font-bold text-white leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+        <h2 class="serif font-bold leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem); color:var(--dark);">
           Reserva tu clase de prueba<br /><em style="color:var(--gold); font-style:italic;">gratuita</em>
         </h2>
-        <p class="leading-relaxed mb-4" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.97rem;">
           Cuéntanos qué idioma te interesa y cuál es tu nivel. Te contactamos en menos de 24 horas con un plan personalizado y una fecha para tu primera clase sin compromiso.
         </p>
-        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.50); font-size:0.85rem;">
+        <p class="text-gray-400 leading-relaxed mb-8" style="font-size:0.85rem;">
           Grupos reducidos &middot; Plazas limitadas &middot; Puedes empezar este mes
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="mailto:info@muchomasqueidiomas.com" class="btn-gold" style="font-size:0.95rem; padding:13px 28px;">Reserva tu clase de prueba</a>
-          <a href="#idiomas" class="btn-gold-outline">Explorar idiomas</a>
+          <a href="#idiomas" class="btn-gold-outline" style="color:var(--dark); border-color:var(--dark); opacity:0.7;">Explorar idiomas</a>
         </div>
-        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid rgba(255,255,255,0.12);">
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);">
-            <span class="text-white font-semibold">info@muchomasqueidiomas.com</span>
+        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid #ede8de;">
+          <div class="text-sm text-gray-500">
+            <span class="font-semibold" style="color:var(--dark);">info@muchomasqueidiomas.com</span>
           </div>
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);">
-            <span class="text-white font-semibold">+34 603 85 92 06</span>
+          <div class="text-sm text-gray-500">
+            <span class="font-semibold" style="color:var(--dark);">+34 603 85 92 06</span>
           </div>
         </div>
       </div>
 
       <!-- Quick contact form -->
-      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 8px 40px rgba(0,0,0,0.25);">
+      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border: 1px solid #ede8de;">
         <h3 class="serif font-bold text-xl mb-1" style="color:var(--dark);">Reserva tu clase de prueba</h3>
         <p class="text-gray-400 text-sm mb-6">Sin compromiso. Te respondemos en menos de 24 horas con tu plan personalizado.</p>
 

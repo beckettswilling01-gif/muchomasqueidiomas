@@ -27,15 +27,15 @@
     .nav-link { color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.25s; letter-spacing: 0.01em; }
     .nav-link:hover { color: #fff; }
     .btn-gold { background: var(--gold); color: #0D1321; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem; padding: 10px 22px; border-radius: 5px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.25s, transform 0.2s, box-shadow 0.25s; display: inline-block; }
-    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(248,232,71,0.35); }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(13,19,33,0.12); }
     .btn-gold-outline { background: transparent; color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; padding: 12px 28px; border-radius: 5px; border: 1.5px solid rgba(255,255,255,0.45); text-decoration: none; letter-spacing: 0.02em; transition: border-color 0.25s, background 0.25s, transform 0.2s, box-shadow 0.25s; display: inline-flex; align-items: center; gap: 6px; }
     .btn-gold-outline:hover { border-color: #fff; background: rgba(255,255,255,0.10); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
     .hero-overlay { background: linear-gradient(to right, rgba(10,15,30,0.93) 0%, rgba(10,15,30,0.78) 45%, rgba(10,15,30,0.30) 80%, rgba(10,15,30,0.22) 100%), linear-gradient(to top, rgba(10,15,30,0.50) 0%, transparent 40%); }
     .section-tag { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
     .check-item { display: flex; align-items: flex-start; gap: 12px; }
-    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; box-shadow: 0 0 10px rgba(248,232,71,0.30); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
     .hero-headline { text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.3); }
-    .hero-gold-glow { text-shadow: 0 0 18px rgba(248,232,71,0.40), 0 0 40px rgba(248,232,71,0.20), 0 4px 24px rgba(0,0,0,0.30); }
+    .hero-gold-glow { }
     .trust-strip { border-top: 1px solid rgba(255,255,255,0.12); }
     .trust-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.18); display: none; }
     @media (min-width: 640px) { .trust-divider { display: block; } }
@@ -47,6 +47,11 @@
     .faq-answer.open { max-height: 300px; padding-bottom: 20px; }
     .faq-chevron { transition: transform 0.3s; flex-shrink: 0; }
     .faq-chevron.open { transform: rotate(180deg); }
+    .why-card { border-radius: 8px; padding: 24px 20px; background: #fff; border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05); }
+    .exp-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+    .exp-body.open { max-height: 200px; padding-bottom: 16px; }
+    .exp-chevron { transition: transform 0.3s; flex-shrink: 0; }
+    .exp-chevron.open { transform: rotate(180deg); }
     #mobile-nav { display: none; }
     #mobile-nav.open { display: block; }
   </style>
@@ -222,42 +227,88 @@
 </section>
 
 <!-- WHAT CLASSES FEEL LIKE -->
-<section class="py-20 lg:py-28" style="background:var(--dark);">
+<section class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div>
         <span class="section-tag">La experiencia</span>
-        <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(2rem, 4vw, 3rem);">
-          Así se siente una clase<br />de francés <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">aquí</em>
+        <h2 class="serif font-bold leading-tight" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3rem);">
+          Así se siente una clase<br />de francés <em style="color:var(--gold); font-style:italic;">aquí</em>
         </h2>
-        <p class="mt-5 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-5 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           Imagina llegar a clase y descubrir que hoy vais a analizar una escena de <em style="font-style:italic;">À bout de souffle</em> de Godard. O que el vocabulario del día surge de un fragmento de <em style="font-style:italic;">L'Étranger</em> de Camus que acabáis de leer en voz alta. O que estáis debatiendo sobre si Sartre tenía razón cuando decía que «el infierno son los otros».
         </p>
-        <p class="mt-4 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-4 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           En nuestras clases de francés, la gramática nunca aparece aislada — se integra de forma natural mientras conversas, mientras escuchas, mientras piensas en francés. Sales de clase con ganas de leer a Flaubert o de ver la última película de Audiard en versión original.
         </p>
       </div>
-      <div class="space-y-7">
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Conversación con elegancia francesa</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Entonación, registro, matices. El francés como se habla en un café parisino, no en un aula genérica.</p></div>
+      <div class="bg-white rounded-lg" style="border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05);">
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Conversación con elegancia francesa</p>
+            </div>
+            <svg class="exp-chevron open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body open" style="padding: 0 20px 16px 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Entonación, registro, matices. El francés como se habla en un café parisino, no en un aula genérica. Practicarás la fluidez y la musicalidad del idioma en situaciones reales de conversación.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Cinefórum Nouvelle Vague y cine contemporáneo</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Truffaut, Godard, Varda, Audiard, Sciamma — ver, escuchar, debatir y sentir el cine francés.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Cinefórum Nouvelle Vague y cine contemporáneo</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Truffaut, Godard, Varda, Audiard, Sciamma — ver, escuchar, debatir y sentir el cine francés. Cada película es una clase magistral de lengua, cultura y pensamiento visual.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Tertulias de filosofía en francés</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">De Descartes a Foucault, de Simone de Beauvoir a los pensadores contemporáneos. Pensar en francés es pensar con precisión.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Tertulias de filosofía en francés</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">De Descartes a Foucault, de Simone de Beauvoir a los pensadores contemporáneos. Pensar en francés es pensar con precisión. Desarrollarás tu capacidad argumentativa mientras amplías tu vocabulario filosófico.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Club de lectura en francés</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">De Flaubert a Annie Ernaux. Lectura, vocabulario y debate en francés sobre obras que han marcado la historia.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Club de lectura en francés</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">De Flaubert a Annie Ernaux. Lectura, vocabulario y debate en francés sobre obras que han marcado la historia. Cada sesión te acerca a la literatura francófona con textos adaptados a tu nivel.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Cultura del café y <em style="font-style:italic;">art de vivre</em></p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Gastronomía, moda, arte de vivir. Aprender francés es también descubrir una forma de entender el mundo con refinamiento.</p></div>
+
+        <div>
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Cultura del café y <em style="font-style:italic;">art de vivre</em></p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Gastronomía, moda, arte de vivir. Aprender francés es también descubrir una forma de entender el mundo con refinamiento. Explorarás tradiciones culturales que dan sentido a cada expresión del idioma.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -273,39 +324,56 @@
       </h2>
       <p class="text-gray-500 leading-relaxed mt-4" style="font-size:0.97rem;">Aprender francés aquí significa vivir la cultura francófona sin salir de Madrid. Estas son algunas de las experiencias que te esperan.</p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0006.jpg" alt="Cinefórum francés en Madrid — Nouvelle Vague" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Cinefórum francés</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Truffaut, Godard, Varda, Audiard, Sciamma. Cine francés con debate y conversación para entrenar el oído y la expresión.</p>
+    <div class="space-y-16 lg:space-y-20">
+
+      <!-- Activity 1 - Image LEFT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0006.jpg" alt="Cinefórum francés en Madrid — Nouvelle Vague" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Cinefórum francés</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Truffaut, Godard, Varda, Audiard, Sciamma. Cada sesión es una inmersión en el cine francés con debate y conversación para entrenar el oído y la expresión. Analizamos diálogos en versión original, descubrimos expresiones cotidianas y exploramos las corrientes cinematográficas que hicieron de Francia la cuna del séptimo arte.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">La Nouvelle Vague revolucionó el cine mundial. Aquí la descubres en su lengua original, con todo su poder expresivo.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0024.jpg" alt="Club de lectura francesa en Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Club de lectura</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Camus, Flaubert, Ernaux, Modiano. Lee en francés, debate en francés, piensa en francés con obras que marcaron la historia.</p>
+
+      <!-- Activity 2 - Image RIGHT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0024.jpg" alt="Club de lectura francesa en Madrid" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Club de lectura</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Camus, Flaubert, Ernaux, Modiano. Lee en francés, debate en francés, piensa en francés con obras que marcaron la historia. Cada mes seleccionamos un libro y lo comentamos juntos, explorando el estilo literario, el vocabulario y el contexto histórico que da sentido a cada página.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">Francia ha dado al mundo más premios Nobel de Literatura que cualquier otro país. Leer en francés es acceder a una tradición literaria incomparable.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0002.jpg" alt="Visita cultural — tertulias de filosofía francesa en Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Tertulias de filosofía</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Sartre, Beauvoir, Foucault, Derrida. Debates filosóficos en francés que afinan tu pensamiento y tu dominio del idioma.</p>
+
+      <!-- Activity 3 - Image LEFT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0002.jpg" alt="Visita cultural — tertulias de filosofía francesa en Madrid" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Tertulias de filosofía</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Sartre, Beauvoir, Foucault, Derrida. Debates filosóficos en francés que afinan tu pensamiento y tu dominio del idioma. Cada tertulia aborda un tema diferente, desde el existencialismo hasta la deconstrucción, practicando la argumentación y el vocabulario abstracto que distingue al francés culto.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">La filosofía francesa ha moldeado el pensamiento moderno. Debatir estas ideas en francés es la forma más auténtica de comprenderlas.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260408-WA0046.jpg" alt="Taller de gastronomía — cultura francófona" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Cultura francófona</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Gastronomía, moda, arte, <em style="font-style:italic;">chanson française</em>. Explora el universo francófono a través de sus tradiciones más refinadas.</p>
+
+      <!-- Activity 4 - Image RIGHT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260408-WA0046.jpg" alt="Taller de gastronomía — cultura francófona" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Cultura francófona</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Gastronomía, moda, arte, <em style="font-style:italic;">chanson française</em>. Explora el universo francófono a través de sus tradiciones más refinadas. Desde talleres de cocina francesa hasta sesiones sobre arte impresionista y la elegancia parisina, cada actividad te sumerge en la cultura que da vida al idioma.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">El francés es la lengua de la diplomacia, la gastronomía y la haute couture. Vivirlo es la mejor forma de aprenderlo.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -346,34 +414,34 @@
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="py-16 lg:py-20" style="background:var(--dark);">
+<section class="py-16 lg:py-20" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <span class="section-tag">¿Por qué nuestra academia?</span>
-      <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
+      <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem); color:var(--dark);">
         Aprende francés en Madrid con <em style="color:#F8E847; font-style:italic;">inmersión cultural real</em>
       </h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">5</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">5</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">continentes francófonos</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">El francés te abre puertas en Europa, África, América, Asia y Oceanía.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">El francés te abre puertas en Europa, África, América, Asia y Oceanía.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">DELF</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">DELF</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">preparación oficial</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Preparación DELF, DALF y TCF con nuestro método cultural e inmersivo.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Preparación DELF, DALF y TCF con nuestro método cultural e inmersivo.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">8</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">8</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">alumnos máx. por grupo</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Pronunciación, entonación y confianza con atención personalizada real.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Pronunciación, entonación y confianza con atención personalizada real.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">100%</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">100%</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">cultura francesa</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Cine, literatura, filosofía, gastronomía — la cultura es nuestro método.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Cine, literatura, filosofía, gastronomía — la cultura es nuestro método.</p>
       </div>
     </div>
   </div>
@@ -398,25 +466,25 @@
 </section>
 
 <!-- FINAL CTA -->
-<section id="contacto" class="py-20 lg:py-28" style="background:var(--dark);">
+<section id="contacto" class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div>
         <span class="section-tag" style="color:var(--gold);">¿Listo para empezar?</span>
-        <h2 class="serif font-bold text-white leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+        <h2 class="serif font-bold leading-tight mb-5" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3.2rem);">
           Empieza a hablar<br />francés <em style="color:var(--gold); font-style:italic;">hoy</em>
         </h2>
-        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">Cuéntanos tu nivel, tus intereses y qué te inspira del francés. Te contactamos en menos de 24 horas con un plan a tu medida.</p>
+        <p class="leading-relaxed mb-8 text-gray-500" style="font-size:0.97rem;">Cuéntanos tu nivel, tus intereses y qué te inspira del francés. Te contactamos en menos de 24 horas con un plan a tu medida.</p>
         <div class="flex flex-wrap gap-4">
           <a href="mailto:info@muchomasqueidiomas.com" class="btn-gold" style="font-size:0.95rem; padding:13px 28px;">Reserva tu clase de prueba</a>
-          <a href="index.html#idiomas" class="btn-gold-outline">Ver todos los idiomas</a>
+          <a href="index.html#idiomas" class="btn-gold-outline" style="color:var(--dark); border-color:var(--dark); opacity:0.7;">Ver todos los idiomas</a>
         </div>
-        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid rgba(255,255,255,0.12);">
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);"><span class="text-white font-semibold">info@muchomasqueidiomas.com</span></div>
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);"><span class="text-white font-semibold">+34 603 85 92 06</span></div>
+        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid #ede8de;">
+          <div class="text-sm text-gray-500"><span class="font-semibold" style="color:var(--dark);">info@muchomasqueidiomas.com</span></div>
+          <div class="text-sm text-gray-500"><span class="font-semibold" style="color:var(--dark);">+34 603 85 92 06</span></div>
         </div>
       </div>
-      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 8px 40px rgba(0,0,0,0.25);">
+      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border: 1px solid #ede8de;">
         <h3 class="serif font-bold text-xl mb-1" style="color:var(--dark);">Escríbenos</h3>
         <p class="text-gray-400 text-sm mb-6">Te respondemos en menos de 24 horas.</p>
         <form id="contact-form" action="https://formsubmit.co/info@muchomasqueidiomas.com" method="POST" onsubmit="handleContact(event)" novalidate>
@@ -530,6 +598,7 @@
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => { if (window.scrollY > 50) { header.style.position = 'fixed'; header.style.background = 'rgba(10,15,30,0.88)'; header.style.backdropFilter = 'blur(16px) saturate(1.2)'; header.style.WebkitBackdropFilter = 'blur(16px) saturate(1.2)'; header.style.borderBottom = '1px solid rgba(255,255,255,0.08)'; header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)'; } else { header.style.position = 'absolute'; header.style.background = 'transparent'; header.style.backdropFilter = 'none'; header.style.WebkitBackdropFilter = 'none'; header.style.borderBottom = 'none'; header.style.boxShadow = 'none'; } }, { passive: true });
   function toggleFaq(el) { const answer = el.nextElementSibling; const chevron = el.querySelector('.faq-chevron'); answer.classList.toggle('open'); chevron.classList.toggle('open'); }
+  function toggleExp(el) { const body = el.nextElementSibling; const chevron = el.querySelector('.exp-chevron'); body.classList.toggle('open'); chevron.classList.toggle('open'); }
 </script>
 
 <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-40 md:hidden" style="background:rgba(13,19,33,0.96); backdrop-filter:blur(12px); border-top:1px solid rgba(248,232,71,0.25); padding:12px 16px; transform:translateY(100%); transition:transform 0.35s ease;">

@@ -27,15 +27,15 @@
     .nav-link { color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.25s; letter-spacing: 0.01em; }
     .nav-link:hover { color: #fff; }
     .btn-gold { background: var(--gold); color: #0D1321; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem; padding: 10px 22px; border-radius: 5px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.25s, transform 0.2s, box-shadow 0.25s; display: inline-block; }
-    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(248,232,71,0.35); }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(13,19,33,0.12); }
     .btn-gold-outline { background: transparent; color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; padding: 12px 28px; border-radius: 5px; border: 1.5px solid rgba(255,255,255,0.45); text-decoration: none; letter-spacing: 0.02em; transition: border-color 0.25s, background 0.25s, transform 0.2s, box-shadow 0.25s; display: inline-flex; align-items: center; gap: 6px; }
     .btn-gold-outline:hover { border-color: #fff; background: rgba(255,255,255,0.10); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
     .hero-overlay { background: linear-gradient(to right, rgba(10,15,30,0.93) 0%, rgba(10,15,30,0.78) 45%, rgba(10,15,30,0.30) 80%, rgba(10,15,30,0.22) 100%), linear-gradient(to top, rgba(10,15,30,0.50) 0%, transparent 40%); }
     .section-tag { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
     .check-item { display: flex; align-items: flex-start; gap: 12px; }
-    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; box-shadow: 0 0 10px rgba(248,232,71,0.30); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
     .hero-headline { text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.3); }
-    .hero-gold-glow { text-shadow: 0 0 18px rgba(248,232,71,0.40), 0 0 40px rgba(248,232,71,0.20), 0 4px 24px rgba(0,0,0,0.30); }
+    .hero-gold-glow { }
     .trust-strip { border-top: 1px solid rgba(255,255,255,0.12); }
     .trust-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.18); display: none; }
     @media (min-width: 640px) { .trust-divider { display: block; } }
@@ -47,6 +47,11 @@
     .faq-answer.open { max-height: 300px; padding-bottom: 20px; }
     .faq-chevron { transition: transform 0.3s; flex-shrink: 0; }
     .faq-chevron.open { transform: rotate(180deg); }
+    .why-card { border-radius: 8px; padding: 24px 20px; background: #fff; border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05); }
+    .exp-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+    .exp-body.open { max-height: 200px; padding-bottom: 16px; }
+    .exp-chevron { transition: transform 0.3s; flex-shrink: 0; }
+    .exp-chevron.open { transform: rotate(180deg); }
     #mobile-nav { display: none; }
     #mobile-nav.open { display: block; }
   </style>
@@ -223,42 +228,88 @@
 </section>
 
 <!-- WHAT CLASSES FEEL LIKE -->
-<section class="py-20 lg:py-28" style="background:var(--dark);">
+<section class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div>
         <span class="section-tag">La experiencia</span>
-        <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(2rem, 4vw, 3rem);">
-          Así se siente una clase<br />de japonés <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">aquí</em>
+        <h2 class="serif font-bold leading-tight" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3rem);">
+          Así se siente una clase<br />de japonés <em style="color:var(--gold); font-style:italic;">aquí</em>
         </h2>
-        <p class="mt-5 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-5 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           Imagina llegar a clase y descubrir que hoy vais a analizar un fragmento de "El viaje de Chihiro" en japonés original. O que el vocabulario del día gira en torno a los ingredientes de un auténtico ramen tonkotsu. O que estáis practicando caligrafía shodo mientras aprendéis los trazos de nuevos kanji.
         </p>
-        <p class="mt-4 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-4 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           En nuestras clases de japonés, la gramática nunca es una lista de reglas áridas — aparece naturalmente mientras ves anime, mientras participas en una ceremonia del té simulada, mientras debates sobre la filosofía ikigai. Sales de clase sintiendo que Japón está más cerca de lo que pensabas.
         </p>
       </div>
-      <div class="space-y-7">
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Anime y manga como puerta al japonés real</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Aprender con anime no es un capricho — es escuchar japonés natural, expresiones coloquiales y registros que ningún manual te enseña.</p></div>
+      <div class="bg-white rounded-lg" style="border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05);">
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Anime y manga como puerta al japonés real</p>
+            </div>
+            <svg class="exp-chevron open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body open" style="padding: 0 20px 16px 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Aprender con anime no es un capricho — es escuchar japonés natural, expresiones coloquiales y registros que ningún manual te enseña. Analizamos diálogos reales para que interiorices la lengua de forma orgánica.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Cine japonés y debate cultural</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">De Kurosawa a Koreeda, de Miyazaki a Shinkai. Ver, escuchar, debatir y sentir el cine japonés en versión original.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Cine japonés y debate cultural</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">De Kurosawa a Koreeda, de Miyazaki a Shinkai. Ver, escuchar, debatir y sentir el cine japonés en versión original. Cada proyección entrena tu comprensión auditiva y amplía tu universo cultural.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Escritura que cobra vida</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Talleres de caligrafía shodo donde cada trazo de hiragana o kanji se convierte en una pequeña obra de arte con significado.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Escritura que cobra vida</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Talleres de caligrafía shodo donde cada trazo de hiragana o kanji se convierte en una pequeña obra de arte con significado. La escritura manual refuerza la memoria y conecta cuerpo, mente e idioma.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Cultura del té y filosofía japonesa</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Wabi-sabi, ikigai, omotenashi. El japonés se entiende mejor cuando comprendes la filosofía que hay detrás de cada palabra.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Cultura del té y filosofía japonesa</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Wabi-sabi, ikigai, omotenashi. El japonés se entiende mejor cuando comprendes la filosofía que hay detrás de cada palabra. Explorarás conceptos que no tienen traducción directa y que revelan la esencia de Japón.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Gastronomía japonesa en clase</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Sushi, ramen, tempura, matcha. Vocabulario culinario y tradiciones gastronómicas que conectan lengua y cultura.</p></div>
+
+        <div>
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Gastronomía japonesa en clase</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Sushi, ramen, tempura, matcha. Vocabulario culinario y tradiciones gastronómicas que conectan lengua y cultura. Aprenderás a pedir, describir y disfrutar la cocina japonesa en su idioma original.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -274,39 +325,56 @@
       </h2>
       <p class="text-gray-500 leading-relaxed mt-4" style="font-size:0.97rem;">Aprender japonés aquí significa vivir Japón sin salir de Madrid. Estas son algunas de las experiencias que te esperan.</p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0005.jpg" alt="Cine japonés en Madrid — Kurosawa, Miyazaki, Koreeda" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Cine japonés</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Kurosawa, Ozu, Miyazaki, Koreeda, Shinkai. Cine japonés en versión original con debate y conversación para entrenar el oído y la expresión.</p>
+    <div class="space-y-16 lg:space-y-20">
+
+      <!-- Activity 1 - Image LEFT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0005.jpg" alt="Cine japonés en Madrid — Kurosawa, Miyazaki, Koreeda" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Cine japonés</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Kurosawa, Ozu, Miyazaki, Koreeda, Shinkai. Cine japonés en versión original con debate y conversación para entrenar el oído y la expresión. Cada proyección es una oportunidad para descubrir matices del japonés hablado, desde el lenguaje formal del cine de época hasta las expresiones cotidianas del cine contemporáneo.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">El cine japonés ha ganado la Palma de Oro en Cannes en múltiples ocasiones. Verlo en japonés es descubrir una dimensión que los subtítulos no pueden transmitir.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0002.jpg" alt="Caligrafía japonesa y origami en Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Caligrafía y origami</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Talleres de caligrafía shodo y origami donde aprendes escritura japonesa con pincel, tinta y la concentración zen que te conecta con la tradición.</p>
+
+      <!-- Activity 2 - Image RIGHT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0002.jpg" alt="Caligrafía japonesa y origami en Madrid" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Caligrafía y origami</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Talleres de caligrafía shodo y origami donde aprendes escritura japonesa con pincel, tinta y la concentración zen que te conecta con la tradición. Practicar trazos es mucho más que escribir: es interiorizar el ritmo y la estructura de los kanji mientras desarrollas una disciplina que mejora tu aprendizaje global del idioma.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">En Japón, la caligrafía shodo se considera un camino espiritual. Cada trazo refleja el estado interior de quien lo realiza.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0015.jpg" alt="Anime y cultura pop japonesa en Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Anime y cultura pop</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Sesiones de anime en japonés, lectura de manga, tertulias sobre J-pop y cultura otaku. La cultura pop como herramienta legítima de aprendizaje.</p>
+
+      <!-- Activity 3 - Image LEFT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0015.jpg" alt="Anime y cultura pop japonesa en Madrid" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Anime y cultura pop</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Sesiones de anime en japonés, lectura de manga, tertulias sobre J-pop y cultura otaku. La cultura pop como herramienta legítima de aprendizaje. Analizamos letras de canciones, expresiones de los personajes y el japonés coloquial que se usa en la vida real, convirtiendo tu pasión en progreso lingüístico.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">El anime y el manga son embajadores culturales de Japón en todo el mundo. Entenderlos en japonés abre una conexión directa con su creatividad.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260408-WA0040.jpg" alt="Gastronomía japonesa en Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Gastronomía japonesa</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Sushi, ramen, tempura, wagashi. Vocabulario culinario, tradiciones gastronómicas y la filosofía de la cocina japonesa como puerta al idioma.</p>
+
+      <!-- Activity 4 - Image RIGHT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260408-WA0040.jpg" alt="Gastronomía japonesa en Madrid" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Gastronomía japonesa</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Sushi, ramen, tempura, wagashi. Vocabulario culinario, tradiciones gastronómicas y la filosofía de la cocina japonesa como puerta al idioma. Exploramos la estética del plato, los rituales de la mesa y las expresiones que los japoneses usan al comer, como el famoso itadakimasu.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">La gastronomía japonesa es Patrimonio Inmaterial de la Humanidad. Cada plato es una expresión de armonía, estacionalidad y respeto.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -347,34 +415,34 @@
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="py-16 lg:py-20" style="background:var(--dark);">
+<section class="py-16 lg:py-20" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <span class="section-tag">¿Por qué nuestra academia?</span>
-      <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
+      <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem); color:var(--dark);">
         La forma más eficaz de aprender japonés en <em style="color:#F8E847; font-style:italic;">Madrid</em>
       </h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">3</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">3</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">sistemas de escritura</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Hiragana, katakana y kanji paso a paso, sin agobios. Método visual y progresivo.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Hiragana, katakana y kanji paso a paso, sin agobios. Método visual y progresivo.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">JLPT</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">JLPT</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">preparación N5–N1</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Preparación para todos los niveles del Japanese Language Proficiency Test.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Preparación para todos los niveles del Japanese Language Proficiency Test.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">8</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">8</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">alumnos máx. por grupo</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Atención personalizada para dominar pronunciación, escritura y gramática.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Atención personalizada para dominar pronunciación, escritura y gramática.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">100%</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">100%</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">inmersión cultural</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Anime, cine, caligrafía, gastronomía — la cultura japonesa es nuestro método.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Anime, cine, caligrafía, gastronomía — la cultura japonesa es nuestro método.</p>
       </div>
     </div>
   </div>
@@ -399,25 +467,25 @@
 </section>
 
 <!-- FINAL CTA -->
-<section id="contacto" class="py-20 lg:py-28" style="background:var(--dark);">
+<section id="contacto" class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div>
         <span class="section-tag" style="color:var(--gold);">¿Listo para empezar?</span>
-        <h2 class="serif font-bold text-white leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+        <h2 class="serif font-bold leading-tight mb-5" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3.2rem);">
           Empieza tu camino<br />con el japonés <em style="color:var(--gold); font-style:italic;">hoy</em>
         </h2>
-        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">Cuéntanos tu nivel, tus intereses y qué te inspira de Japón. Te contactamos en menos de 24 horas con un plan a tu medida — ya sea anime, negocios, viajes o pura fascinación por la cultura japonesa.</p>
+        <p class="leading-relaxed mb-8 text-gray-500" style="font-size:0.97rem;">Cuéntanos tu nivel, tus intereses y qué te inspira de Japón. Te contactamos en menos de 24 horas con un plan a tu medida — ya sea anime, negocios, viajes o pura fascinación por la cultura japonesa.</p>
         <div class="flex flex-wrap gap-4">
           <a href="mailto:info@muchomasqueidiomas.com" class="btn-gold" style="font-size:0.95rem; padding:13px 28px;">Reserva tu clase de prueba</a>
-          <a href="index.html#idiomas" class="btn-gold-outline">Ver todos los idiomas</a>
+          <a href="index.html#idiomas" class="btn-gold-outline" style="color:var(--dark); border-color:var(--dark); opacity:0.7;">Ver todos los idiomas</a>
         </div>
-        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid rgba(255,255,255,0.12);">
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);"><span class="text-white font-semibold">info@muchomasqueidiomas.com</span></div>
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);"><span class="text-white font-semibold">+34 603 85 92 06</span></div>
+        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid #ede8de;">
+          <div class="text-sm text-gray-500"><span class="font-semibold" style="color:var(--dark);">info@muchomasqueidiomas.com</span></div>
+          <div class="text-sm text-gray-500"><span class="font-semibold" style="color:var(--dark);">+34 603 85 92 06</span></div>
         </div>
       </div>
-      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 8px 40px rgba(0,0,0,0.25);">
+      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border: 1px solid #ede8de;">
         <h3 class="serif font-bold text-xl mb-1" style="color:var(--dark);">Escríbenos</h3>
         <p class="text-gray-400 text-sm mb-6">Te respondemos en menos de 24 horas.</p>
         <form id="contact-form" action="https://formsubmit.co/info@muchomasqueidiomas.com" method="POST" onsubmit="handleContact(event)" novalidate>
@@ -528,6 +596,7 @@
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => { if (window.scrollY > 50) { header.style.position = 'fixed'; header.style.background = 'rgba(10,15,30,0.88)'; header.style.backdropFilter = 'blur(16px) saturate(1.2)'; header.style.WebkitBackdropFilter = 'blur(16px) saturate(1.2)'; header.style.borderBottom = '1px solid rgba(255,255,255,0.08)'; header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)'; } else { header.style.position = 'absolute'; header.style.background = 'transparent'; header.style.backdropFilter = 'none'; header.style.WebkitBackdropFilter = 'none'; header.style.borderBottom = 'none'; header.style.boxShadow = 'none'; } }, { passive: true });
   function toggleFaq(el) { const answer = el.nextElementSibling; const chevron = el.querySelector('.faq-chevron'); answer.classList.toggle('open'); chevron.classList.toggle('open'); }
+  function toggleExp(el) { const body = el.nextElementSibling; const chevron = el.querySelector('.exp-chevron'); body.classList.toggle('open'); chevron.classList.toggle('open'); }
 </script>
 
 <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-40 md:hidden" style="background:rgba(13,19,33,0.96); backdrop-filter:blur(12px); border-top:1px solid rgba(248,232,71,0.25); padding:12px 16px; transform:translateY(100%); transition:transform 0.35s ease;">

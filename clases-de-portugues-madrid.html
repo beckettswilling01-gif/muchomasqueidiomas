@@ -27,16 +27,16 @@
     .nav-link { color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.25s; letter-spacing: 0.01em; }
     .nav-link:hover { color: #fff; }
     .btn-gold { background: var(--gold); color: #0D1321; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem; padding: 10px 22px; border-radius: 5px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.25s, transform 0.2s, box-shadow 0.25s; display: inline-block; }
-    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(248,232,71,0.35); }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(13,19,33,0.12); }
     .btn-gold-outline { background: transparent; color: #fff; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; padding: 12px 28px; border-radius: 5px; border: 1.5px solid rgba(255,255,255,0.45); text-decoration: none; letter-spacing: 0.02em; transition: border-color 0.25s, background 0.25s, transform 0.2s, box-shadow 0.25s; display: inline-flex; align-items: center; gap: 6px; }
     .btn-gold-outline:hover { border-color: #fff; background: rgba(255,255,255,0.10); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
     .hero-overlay { background: linear-gradient(to right, rgba(10,15,30,0.93) 0%, rgba(10,15,30,0.78) 45%, rgba(10,15,30,0.30) 80%, rgba(10,15,30,0.22) 100%), linear-gradient(to top, rgba(10,15,30,0.50) 0%, transparent 40%); }
     .section-tag { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: block; }
     .check-item { display: flex; align-items: flex-start; gap: 12px; }
-    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; box-shadow: 0 0 10px rgba(248,232,71,0.30); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
     .hero-headline { text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.3); }
-    .hero-gold-glow { text-shadow: 0 0 18px rgba(248,232,71,0.40), 0 0 40px rgba(248,232,71,0.20), 0 4px 24px rgba(0,0,0,0.30); }
-    .trust-strip { border-top: 1px solid rgba(255,255,255,0.12); }
+    .hero-gold-glow { }
+    .trust-strip { border-top: 1px solid #ede8de; }
     .trust-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.18); display: none; }
     @media (min-width: 640px) { .trust-divider { display: block; } }
     .prog-card { background: #fff; border-radius: 8px; padding: 28px 24px; box-shadow: 0 2px 10px rgba(13,19,33,0.07), 0 6px 20px rgba(13,19,33,0.05); border: 1px solid #ede8de; }
@@ -47,6 +47,10 @@
     .faq-answer.open { max-height: 300px; padding-bottom: 20px; }
     .faq-chevron { transition: transform 0.3s; flex-shrink: 0; }
     .faq-chevron.open { transform: rotate(180deg); }
+    .exp-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+    .exp-body.open { max-height: 200px; padding-bottom: 16px; }
+    .exp-chevron { transition: transform 0.3s; flex-shrink: 0; }
+    .exp-chevron.open { transform: rotate(180deg); }
     #mobile-nav { display: none; }
     #mobile-nav.open { display: block; }
   </style>
@@ -92,7 +96,7 @@
       <p class="section-tag mb-6" style="color:var(--gold); font-size:0.74rem; letter-spacing:0.18em;">Clases de portugués en Madrid</p>
       <h1 class="text-white leading-tight mb-6 hero-headline" style="font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size: clamp(2.8rem, 5.5vw, 4.5rem); letter-spacing:-0.01em;">
         Clases de portugués en Madrid para<br />
-        <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">conectar con el mundo lusófono de verdad</em>
+        <em style="color:var(--gold); font-style:italic;">conectar con el mundo lusófono de verdad</em>
       </h1>
       <p class="leading-relaxed mb-9" style="font-size:1.08rem; max-width:540px; color:rgba(255,255,255,0.75); line-height:1.75;">
         El portugués es la lengua de la saudade, del fado, de la bossa nova y de más de 260 millones de personas en cuatro continentes. En nuestra academia de Madrid, lo aprenderás a través de su música, su cine, su literatura y una conversación que sabe a Lisboa y suena a Río.
@@ -222,42 +226,88 @@
 </section>
 
 <!-- WHAT CLASSES FEEL LIKE -->
-<section class="py-20 lg:py-28" style="background:var(--dark);">
+<section class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div>
         <span class="section-tag">La experiencia</span>
-        <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(2rem, 4vw, 3rem);">
-          Así se siente una clase<br />de portugués <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">aquí</em>
+        <h2 class="serif font-bold leading-tight" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3rem);">
+          Así se siente una clase<br />de portugués <em style="color:var(--gold); font-style:italic;">aquí</em>
         </h2>
-        <p class="mt-5 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-5 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           Imagina llegar a clase y escuchar un fado de Mariza mientras analizáis la letra en portugués. O que el vocabulario del día gira en torno a los ingredientes de un bacalhau à Brás. O que estáis viendo una escena de "Ciudad de Dios" y debatiendo sobre la vida en las favelas de Río.
         </p>
-        <p class="mt-4 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-4 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           En nuestras clases de portugués, la gramática nunca es protagonista aislada — aparece naturalmente mientras conversas, mientras cantas, mientras descubres un mundo que habla tu lengua hermana pero con un alma completamente distinta. Sales de clase con ganas de escuchar bossa nova y entender cada palabra.
         </p>
       </div>
-      <div class="space-y-7">
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Escucha activa con fado y bossa nova</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Amália, Cesária Évora, Caetano Veloso, Marisa Monte — entrenar el oído con la música más bella del mundo lusófono.</p></div>
+      <div class="bg-white rounded-lg" style="border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05);">
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Escucha activa con fado y bossa nova</p>
+            </div>
+            <svg class="exp-chevron open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body open" style="padding: 0 20px 16px 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Amália, Cesária Évora, Caetano Veloso, Marisa Monte — entrenar el oído con la música más bella del mundo lusófono. Cada canción es una clase de fonética, vocabulario y emoción que no encontrarás en ningún manual.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Cine lusófono y debate</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Del Cinema Novo brasileño al cine portugués contemporáneo. Ver, escuchar, debatir y sentir en portugués.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Cine lusófono y debate</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Del Cinema Novo brasileño al cine portugués contemporáneo. Ver, escuchar, debatir y sentir en portugués. Cada película abre una ventana a los acentos, expresiones y realidades del mundo lusófono.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Gastronomía portuguesa en clase</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Recetas de bacalhau, pastéis de nata, feijoada brasileña. El vocabulario se aprende también con los sentidos.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Gastronomía portuguesa en clase</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Recetas de bacalhau, pastéis de nata, feijoada brasileña. El vocabulario se aprende también con los sentidos. Descubrirás la riqueza culinaria lusófona mientras practicas lectura y expresión oral.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Literatura lusófona viva</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">De Pessoa a Saramago, de Clarice Lispector a Mia Couto. Lectura, vocabulario y debate sobre obras que importan.</p></div>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Literatura lusófona viva</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">De Pessoa a Saramago, de Clarice Lispector a Mia Couto. Lectura, vocabulario y debate sobre obras que importan. Cada texto te acerca a la sensibilidad literaria que hace único al portugués.</p>
+          </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div><p class="text-white font-semibold text-sm">Pronunciación y fonética específica</p><p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Las nasales, los diptongos, la diferencia entre el acento de Lisboa y el de São Paulo. Sonar portugués, no solo hablarlo.</p></div>
+
+        <div>
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Pronunciación y fonética específica</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Las nasales, los diptongos, la diferencia entre el acento de Lisboa y el de São Paulo. Sonar portugués, no solo hablarlo. Trabajarás la musicalidad del idioma hasta que tu pronunciación suene natural y auténtica.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
@@ -273,39 +323,56 @@
       </h2>
       <p class="text-gray-500 leading-relaxed mt-4" style="font-size:0.97rem;">Aprender portugués aquí significa vivir Portugal y Brasil sin salir de Madrid. Estas son algunas de las experiencias que te esperan.</p>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0006.jpg" alt="Noches de fado en Madrid — academia de portugués" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Noches de fado</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Amália, Mariza, Carminho. Escuchar fado, analizar sus letras, sentir la saudade y hablar sobre lo que la música nos provoca — todo en portugués.</p>
+    <div class="space-y-16 lg:space-y-20">
+
+      <!-- Activity 1 - Image LEFT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0006.jpg" alt="Noches de fado en Madrid — academia de portugués" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Noches de fado</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Amália, Mariza, Carminho: escuchamos fado, analizamos sus letras, sentimos la saudade y hablamos sobre lo que la música nos provoca, todo en portugués. Cada sesión es una inmersión emocional en la cultura portuguesa a través de su género musical más emblemático. Aprenderás vocabulario poético, expresiones de sentimiento y la musicalidad única de la lengua portuguesa.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">El fado fue declarado Patrimonio Inmaterial de la Humanidad por la UNESCO en 2011, reconociendo su valor como expresión del alma portuguesa.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260408-WA0040.jpg" alt="Cine lusófono en Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Cine lusófono</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Ciudad de Dios, Tabú, Central do Brasil, cine mozambiqueño. El cine en portugués como ventana a realidades diversas y conversación profunda.</p>
+
+      <!-- Activity 2 - Image RIGHT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260408-WA0040.jpg" alt="Cine lusófono en Madrid" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Cine lusófono</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Ciudad de Dios, Tabú, Central do Brasil, cine mozambiqueño: el cine en portugués como ventana a realidades diversas y conversación profunda. Cada proyección va seguida de un debate donde analizamos diálogos, comparamos acentos brasileños y portugueses y exploramos las culturas representadas. Es una forma viva de entrenar el oído y ampliar tu comprensión del mundo lusófono.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">El cine lusófono abarca desde el realismo mágico brasileño hasta el neorrealismo portugués, reflejando la diversidad de nueve países.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0022.jpg" alt="Gastronomía portuguesa en Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Gastronomía portuguesa</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Pastéis de nata, bacalhau, feijoada, pão de queijo. Vocabulario culinario, recetas y tertulias sobre la tradición gastronómica lusófona.</p>
+
+      <!-- Activity 3 - Image LEFT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0022.jpg" alt="Gastronomía portuguesa en Madrid" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Gastronomía portuguesa</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Pastéis de nata, bacalhau, feijoada, pão de queijo: vocabulario culinario, recetas y tertulias sobre la tradición gastronómica lusófona. Visitamos restaurantes portugueses y brasileños en Madrid, comentamos recetas tradicionales y descubrimos cómo la cocina refleja siglos de historia y mestizaje cultural. Aprender portugués a través de la gastronomía es aprender con todos los sentidos.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">Portugal tiene más de mil recetas de bacalao y Brasil celebra la feijoada como símbolo de su identidad mestiza.</p>
         </div>
       </div>
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0028.jpg" alt="Tertulias culturales en portugués" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Tertulias culturales</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Pessoa, Saramago, Lispector, Mia Couto. Lecturas compartidas, debate literario y conversación libre sobre el mundo lusófono.</p>
+
+      <!-- Activity 4 - Image RIGHT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0028.jpg" alt="Tertulias culturales en portugués" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Tertulias culturales</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Pessoa, Saramago, Lispector, Mia Couto: lecturas compartidas, debate literario y conversación libre sobre el mundo lusófono. En cada tertulia leemos fragmentos de grandes autores, comentamos sus ideas y practicamos la expresión oral en portugués. Es un espacio para descubrir la extraordinaria riqueza literaria de la lusofonía mientras mejoras tu fluidez y tu vocabulario.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">Fernando Pessoa creó más de setenta heterónimos, cada uno con su propia voz literaria, convirtiendo el portugués en un universo infinito.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -346,34 +413,34 @@
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="py-16 lg:py-20" style="background:var(--dark);">
+<section class="py-16 lg:py-20" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <span class="section-tag">¿Por qué nuestra academia?</span>
-      <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
+      <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem); color:var(--dark);">
         Aprende portugués en Madrid con <em style="color:#F8E847; font-style:italic;">inmersión lusófona real</em>
       </h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">260M</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">260M</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">hablantes en el mundo</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Portugal, Brasil, África, Asia — el portugués conecta continentes.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Portugal, Brasil, África, Asia — el portugués conecta continentes.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">CAPLE</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">CAPLE</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">preparación oficial</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Preparación para la certificación oficial CAPLE con método inmersivo.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Preparación para la certificación oficial CAPLE con método inmersivo.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">2</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">2</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">variantes: Portugal + Brasil</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Enseñamos las diferencias entre portugués europeo y brasileño.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Enseñamos las diferencias entre portugués europeo y brasileño.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">8</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">8</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">alumnos máx. por grupo</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Fado, bossa nova, cine y conversación con atención personalizada.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Fado, bossa nova, cine y conversación con atención personalizada.</p>
       </div>
     </div>
   </div>
@@ -398,25 +465,25 @@
 </section>
 
 <!-- FINAL CTA -->
-<section id="contacto" class="py-20 lg:py-28" style="background:var(--dark);">
+<section id="contacto" class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
       <div>
         <span class="section-tag" style="color:var(--gold);">¿Listo para empezar?</span>
-        <h2 class="serif font-bold text-white leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+        <h2 class="serif font-bold leading-tight mb-5" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3.2rem);">
           Empieza a hablar<br />portugués <em style="color:var(--gold); font-style:italic;">hoy</em>
         </h2>
-        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">Cuéntanos tu nivel, tus intereses y qué te inspira del portugués. ¿Portugal o Brasil? ¿Negocios o placer? ¿Fado o bossa nova? Te contactamos en menos de 24 horas con un plan a tu medida.</p>
+        <p class="leading-relaxed mb-8 text-gray-500" style="font-size:0.97rem;">Cuéntanos tu nivel, tus intereses y qué te inspira del portugués. ¿Portugal o Brasil? ¿Negocios o placer? ¿Fado o bossa nova? Te contactamos en menos de 24 horas con un plan a tu medida.</p>
         <div class="flex flex-wrap gap-4">
           <a href="mailto:info@muchomasqueidiomas.com" class="btn-gold" style="font-size:0.95rem; padding:13px 28px;">Reserva tu clase de prueba</a>
-          <a href="index.html#idiomas" class="btn-gold-outline">Ver todos los idiomas</a>
+          <a href="index.html#idiomas" class="btn-gold-outline" style="color:var(--dark); border-color:var(--dark); opacity:0.7;">Ver todos los idiomas</a>
         </div>
-        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid rgba(255,255,255,0.12);">
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);"><span class="text-white font-semibold">info@muchomasqueidiomas.com</span></div>
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);"><span class="text-white font-semibold">+34 603 85 92 06</span></div>
+        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid #ede8de;">
+          <div class="text-sm text-gray-500"><span class="font-semibold" style="color:var(--dark);">info@muchomasqueidiomas.com</span></div>
+          <div class="text-sm text-gray-500"><span class="font-semibold" style="color:var(--dark);">+34 603 85 92 06</span></div>
         </div>
       </div>
-      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 8px 40px rgba(0,0,0,0.25);">
+      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border: 1px solid #ede8de;">
         <h3 class="serif font-bold text-xl mb-1" style="color:var(--dark);">Escríbenos</h3>
         <p class="text-gray-400 text-sm mb-6">Te respondemos en menos de 24 horas.</p>
         <form id="contact-form" action="https://formsubmit.co/info@muchomasqueidiomas.com" method="POST" onsubmit="handleContact(event)" novalidate>
@@ -527,6 +594,7 @@
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => { if (window.scrollY > 50) { header.style.position = 'fixed'; header.style.background = 'rgba(10,15,30,0.88)'; header.style.backdropFilter = 'blur(16px) saturate(1.2)'; header.style.WebkitBackdropFilter = 'blur(16px) saturate(1.2)'; header.style.borderBottom = '1px solid rgba(255,255,255,0.08)'; header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)'; } else { header.style.position = 'absolute'; header.style.background = 'transparent'; header.style.backdropFilter = 'none'; header.style.WebkitBackdropFilter = 'none'; header.style.borderBottom = 'none'; header.style.boxShadow = 'none'; } }, { passive: true });
   function toggleFaq(el) { const answer = el.nextElementSibling; const chevron = el.querySelector('.faq-chevron'); answer.classList.toggle('open'); chevron.classList.toggle('open'); }
+  function toggleExp(el) { const body = el.nextElementSibling; const chevron = el.querySelector('.exp-chevron'); body.classList.toggle('open'); chevron.classList.toggle('open'); }
 </script>
 
 <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-40 md:hidden" style="background:rgba(13,19,33,0.96); backdrop-filter:blur(12px); border-top:1px solid rgba(248,232,71,0.25); padding:12px 16px; transform:translateY(100%); transition:transform 0.35s ease;">

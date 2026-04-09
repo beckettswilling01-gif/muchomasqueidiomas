@@ -43,7 +43,7 @@
       transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
       display: inline-block;
     }
-    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(248,232,71,0.35); }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(13,19,33,0.12); }
     .btn-gold-outline {
       background: transparent; color: #fff;
       font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem;
@@ -67,18 +67,18 @@
     }
 
     .check-item { display: flex; align-items: flex-start; gap: 12px; }
-    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; box-shadow: 0 0 10px rgba(248,232,71,0.30); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 
     .hero-headline { text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.3); }
-    .hero-gold-glow { text-shadow: 0 0 18px rgba(248,232,71,0.40), 0 0 40px rgba(248,232,71,0.20), 0 4px 24px rgba(0,0,0,0.30); }
+    .hero-gold-glow { }
 
-    .trust-strip { border-top: 1px solid rgba(255,255,255,0.12); }
+    .trust-strip { border-top: 1px solid #ede8de; }
     .trust-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.18); display: none; }
     @media (min-width: 640px) { .trust-divider { display: block; } }
 
     .why-card {
       border-radius: 8px; padding: 24px 20px;
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10);
+      background: #fff; border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05);
     }
 
     .prog-card {
@@ -95,6 +95,10 @@
     .faq-chevron { transition: transform 0.3s; flex-shrink: 0; }
     .faq-chevron.open { transform: rotate(180deg); }
 
+    .exp-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+    .exp-body.open { max-height: 200px; padding-bottom: 16px; }
+    .exp-chevron { transition: transform 0.3s; flex-shrink: 0; }
+    .exp-chevron.open { transform: rotate(180deg); }
     #mobile-nav { display: none; }
     #mobile-nav.open { display: block; }
   </style>
@@ -150,7 +154,7 @@
 
       <h1 class="text-white leading-tight mb-6 hero-headline" style="font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size: clamp(2.8rem, 5.5vw, 4.5rem); letter-spacing:-0.01em;">
         Clases de español en Madrid:<br />
-        <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">vivir España en tu nuevo idioma</em>
+        <em style="color:var(--gold); font-style:italic;">vivir España en tu nuevo idioma</em>
       </h1>
 
       <p class="leading-relaxed mb-9" style="font-size:1.08rem; max-width:540px; color:rgba(255,255,255,0.75); line-height:1.75;">
@@ -300,59 +304,90 @@
 <!-- ═══════════════════════════════════════
      WHAT CLASSES FEEL LIKE
 ════════════════════════════════════════ -->
-<section class="py-20 lg:py-28" style="background:var(--dark);">
+<section class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
       <div>
         <span class="section-tag">La experiencia</span>
-        <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(2rem, 4vw, 3rem);">
-          Así se siente una clase<br />de español <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">aquí</em>
+        <h2 class="serif font-bold leading-tight" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3rem);">
+          Así se siente una clase<br />de español <em style="color:var(--gold); font-style:italic;">aquí</em>
         </h2>
-        <p class="mt-5 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-5 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           Imagina que hoy la clase empieza en el Mercado de San Miguel. Pides tapas en español, regateas precios, preguntas por los ingredientes. Mañana debatimos en un café de Lavapiés sobre una película de Almodóvar. El jueves visitamos el Museo del Prado y describes lo que ves, lo que sientes, lo que piensas — todo en español.
         </p>
-        <p class="mt-4 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-4 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           No hay libro de texto como protagonista. Hay Madrid, hay vida, hay contexto. Sales de clase y sigues practicando porque la ciudad no para de hablarte en español.
         </p>
       </div>
 
-      <div class="space-y-7">
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Compras en mercados y tiendas reales</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Practica español pidiendo algo, preguntando y negociando en los mercados de La Latina, Antón Martín o San Miguel.</p>
+      <div class="bg-white rounded-lg" style="border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05);">
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Compras en mercados y tiendas reales</p>
+            </div>
+            <svg class="exp-chevron open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body open" style="padding: 0 20px 16px 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Practica español pidiendo algo, preguntando y negociando en los mercados de La Latina, Antón Martín o San Miguel. Cada visita es una clase práctica donde el vocabulario cobra vida en situaciones reales.</p>
           </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Tertulias y debates en cafés</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Opina, argumenta y defiende tus ideas en español sobre cultura y sociedad, como hacen los madrileños.</p>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Tertulias y debates en cafés</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Opina, argumenta y defiende tus ideas en español sobre cultura y sociedad, como hacen los madrileños. Ganarás confianza para expresar opiniones complejas y participar en conversaciones espontáneas.</p>
           </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Visitas culturales a museos y barrios</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Estamos en pleno triángulo de los museos (Prado, Reina Sofía, Thyssen) — aprende vocabulario y expresiones describiendo arte, arquitectura e historia.</p>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Visitas culturales a museos y barrios</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Estamos en pleno triángulo de los museos (Prado, Reina Sofía, Thyssen) — aprende vocabulario y expresiones describiendo arte, arquitectura e historia. Madrid se convierte en tu aula más inspiradora.</p>
           </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Español cotidiano para tu vida diaria</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">El médico, el banco, la administración, los vecinos. Aprende el español que necesitas para resolver tu día a día en Madrid.</p>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Español cotidiano para tu vida diaria</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">El médico, el banco, la administración, los vecinos. Aprende el español que necesitas para resolver tu día a día en Madrid. Practicarás con simulaciones de situaciones cotidianas que te darán autonomía desde el primer momento.</p>
           </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Gastronomía como herramienta de aprendizaje</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Cocina española, tapas, recetas, vocabulario culinario. Aprende español con los cinco sentidos.</p>
+
+        <div>
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Gastronomía como herramienta de aprendizaje</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Cocina española, tapas, recetas, vocabulario culinario. Aprende español con los cinco sentidos. Descubrirás la cultura gastronómica española mientras amplías tu vocabulario de forma deliciosa.</p>
           </div>
         </div>
+
       </div>
 
     </div>
@@ -375,53 +410,53 @@
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="space-y-16 lg:space-y-20">
 
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0003.jpg" alt="Visita a museos en español — Prado, Reina Sofía, Thyssen" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7v1a3 3 0 006 0V7m0 0a3 3 0 006 0V7m0 0a3 3 0 006 0V7H3l2-4h14l2 4"/></svg>
-          </div>
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Visitas a museos</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">El Prado, el Reina Sofía, el Thyssen. Describe obras, aprende historia y practica español rodeado de arte universal.</p>
+      <!-- Activity 1 - Image LEFT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0003.jpg" alt="Visita a museos en español — Prado, Reina Sofía, Thyssen" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Visitas a museos</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">El Prado, el Reina Sofía, el Thyssen: tres de los museos más importantes del mundo, a pocos minutos de nuestra academia. En cada visita guiada en español describirás obras maestras, aprenderás historia del arte y ampliarás tu vocabulario cultural. Es una forma única de conectar con la identidad española mientras practicas el idioma rodeado de arte universal.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">Madrid alberga el "Triángulo del Arte", una de las mayores concentraciones de obras maestras del mundo en apenas un kilómetro.</p>
         </div>
       </div>
 
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0023.jpg" alt="Tertulias y debates en español en Madrid" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          </div>
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Tertulias y debates</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">La tradición española de la tertulia, llevada a tu aprendizaje. Opina, argumenta y conversa sobre actualidad, cultura y sociedad.</p>
+      <!-- Activity 2 - Image RIGHT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0023.jpg" alt="Tertulias y debates en español en Madrid" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Tertulias y debates</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">La tertulia es una tradición profundamente española: reunirse para opinar, argumentar y conversar sobre actualidad, cultura y sociedad. En nuestras sesiones llevarás esta costumbre a tu aprendizaje, practicando la expresión oral en un ambiente distendido y estimulante. Ganarás confianza para defender tus ideas en español con fluidez y naturalidad.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">Las tertulias literarias del Café Gijón llevan más de un siglo reuniendo a escritores e intelectuales en el corazón de Madrid.</p>
         </div>
       </div>
 
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260408-WA0046.jpg" alt="Gastronomía española — aprender español cocinando" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-          </div>
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Gastronomía española</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Tapas, mercados, recetas tradicionales. Aprende vocabulario culinario mientras descubres la cocina española de verdad.</p>
+      <!-- Activity 3 - Image LEFT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260408-WA0046.jpg" alt="Gastronomía española — aprender español cocinando" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div>
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Gastronomía española</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Tapas, mercados, recetas tradicionales: la cocina española es una puerta de entrada al idioma y a la cultura. En nuestras actividades gastronómicas aprenderás vocabulario culinario mientras descubres platos auténticos y visitas mercados locales. Cocinar, pedir en un bar o comentar una receta se convierten en oportunidades reales para practicar español.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">El Mercado de San Miguel y el de San Antón son auténticas aulas abiertas donde el español se mezcla con aromas y sabores.</p>
         </div>
       </div>
 
-      <div class="rounded-lg overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(13,19,33,0.12);">
-        <img src="images/IMG-20260326-WA0016.jpg" alt="Salidas por los barrios de Madrid en español" style="width:100%; height:320px; object-fit:cover; display:block;" />
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(13,19,33,0.90) 0%, rgba(13,19,33,0.20) 60%);"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-6">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3" style="background:rgba(248,232,71,0.20); border:1px solid rgba(248,232,71,0.35);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F8E847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3 class="serif text-white font-bold text-lg leading-snug mb-2">Salidas por Madrid</h3>
-          <p class="text-gray-300 text-sm leading-relaxed">Malasaña, La Latina, Lavapiés, el Retiro. Recorre los barrios más auténticos de Madrid hablando español en cada esquina.</p>
+      <!-- Activity 4 - Image RIGHT -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <div class="lg:order-2 rounded-lg overflow-hidden" style="box-shadow: 0 4px 20px rgba(13,19,33,0.10);">
+          <img src="images/IMG-20260326-WA0016.jpg" alt="Salidas por los barrios de Madrid en español" style="width:100%; height:360px; object-fit:cover; display:block;" />
+        </div>
+        <div class="lg:order-1">
+          <h3 class="serif font-bold text-xl mb-3" style="color:var(--dark);">Salidas por Madrid</h3>
+          <p class="text-gray-500 leading-relaxed mb-4" style="font-size:0.95rem;">Malasaña, La Latina, Lavapiés, el Retiro: cada barrio de Madrid tiene su propia personalidad y su propio español. En nuestras salidas recorrerás las calles más auténticas de la ciudad, hablando con vecinos, descubriendo rincones ocultos y practicando el idioma en contextos reales. Madrid se convierte en tu aula más grande y más viva.</p>
+          <p class="italic text-gray-400 text-sm" style="border-left: 2px solid var(--gold); padding-left: 12px;">Cada barrio madrileño tiene su propio carácter: desde el espíritu bohemio de Malasaña hasta la energía multicultural de Lavapiés.</p>
         </div>
       </div>
 
@@ -472,34 +507,34 @@
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="py-16 lg:py-20" style="background:var(--dark);">
+<section class="py-16 lg:py-20" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <span class="section-tag">¿Por qué nuestra academia?</span>
-      <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
+      <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem); color:var(--dark);">
         La diferencia de aprender español con <em style="color:#F8E847; font-style:italic;">inmersión real en Madrid</em>
       </h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">Madrid</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">Madrid</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">es tu aula</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Sales de clase y sigues aprendiendo: en el mercado, en el café, en la calle.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Sales de clase y sigues aprendiendo: en el mercado, en el café, en la calle.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">8</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">8</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">alumnos máx. por grupo</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Cada alumno habla, practica y recibe corrección personalizada.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Cada alumno habla, practica y recibe corrección personalizada.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">DELE</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">DELE</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">preparación oficial</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Preparamos DELE y SIELE con método inmersivo: resultados oficiales, aprendizaje natural.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Preparamos DELE y SIELE con método inmersivo: resultados oficiales, aprendizaje natural.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">5.0</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">5.0</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">en Google Reviews</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Estudiantes de todo el mundo recomiendan nuestra academia.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Estudiantes de todo el mundo recomiendan nuestra academia.</p>
       </div>
     </div>
   </div>
@@ -597,33 +632,33 @@
 <!-- ═══════════════════════════════════════
      FINAL CTA
 ════════════════════════════════════════ -->
-<section id="contacto" class="py-20 lg:py-28" style="background:var(--dark);">
+<section id="contacto" class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
       <div>
         <span class="section-tag" style="color:var(--gold);">¿Listo para empezar?</span>
-        <h2 class="serif font-bold text-white leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+        <h2 class="serif font-bold leading-tight mb-5" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3.2rem);">
           Tu nueva vida en español<br />empieza <em style="color:var(--gold); font-style:italic;">aquí</em>
         </h2>
-        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="leading-relaxed mb-8 text-gray-500" style="font-size:0.97rem;">
           Cuéntanos de dónde vienes, cuál es tu nivel y qué necesitas. Te contactamos en menos de 24 horas con un plan personalizado para que empieces a vivir Madrid en español.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="mailto:info@muchomasqueidiomas.com" class="btn-gold" style="font-size:0.95rem; padding:13px 28px;">Reserva tu clase de prueba</a>
-          <a href="index.html#idiomas" class="btn-gold-outline">Ver todos los idiomas</a>
+          <a href="index.html#idiomas" class="btn-gold-outline" style="color:var(--dark); border-color:var(--dark); opacity:0.7;">Ver todos los idiomas</a>
         </div>
-        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid rgba(255,255,255,0.12);">
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);">
-            <span class="text-white font-semibold">info@muchomasqueidiomas.com</span>
+        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid #ede8de;">
+          <div class="text-sm text-gray-500">
+            <span class="font-semibold" style="color:var(--dark);">info@muchomasqueidiomas.com</span>
           </div>
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);">
-            <span class="text-white font-semibold">+34 603 85 92 06</span>
+          <div class="text-sm text-gray-500">
+            <span class="font-semibold" style="color:var(--dark);">+34 603 85 92 06</span>
           </div>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 8px 40px rgba(0,0,0,0.25);">
+      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border: 1px solid #ede8de;">
         <h3 class="serif font-bold text-xl mb-1" style="color:var(--dark);">Escríbenos</h3>
         <p class="text-gray-400 text-sm mb-6">Te respondemos en menos de 24 horas.</p>
 
@@ -839,6 +874,7 @@
     answer.classList.toggle('open');
     chevron.classList.toggle('open');
   }
+  function toggleExp(el) { const body = el.nextElementSibling; const chevron = el.querySelector('.exp-chevron'); body.classList.toggle('open'); chevron.classList.toggle('open'); }
 </script>
 
 <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 z-40 md:hidden" style="background:rgba(13,19,33,0.96); backdrop-filter:blur(12px); border-top:1px solid rgba(248,232,71,0.25); padding:12px 16px; transform:translateY(100%); transition:transform 0.35s ease;">

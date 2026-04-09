@@ -43,7 +43,7 @@
       transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
       display: inline-block;
     }
-    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(248,232,71,0.35); }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(13,19,33,0.12); }
     .btn-gold-outline {
       background: transparent; color: #fff;
       font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem;
@@ -67,18 +67,18 @@
     }
 
     .check-item { display: flex; align-items: flex-start; gap: 12px; }
-    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; box-shadow: 0 0 10px rgba(248,232,71,0.30); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .check-dot { width: 22px; height: 22px; border-radius: 50%; background: #F8E847; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 
     .hero-headline { text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.3); }
-    .hero-gold-glow { text-shadow: 0 0 18px rgba(248,232,71,0.40), 0 0 40px rgba(248,232,71,0.20), 0 4px 24px rgba(0,0,0,0.30); }
+    .hero-gold-glow { }
 
-    .trust-strip { border-top: 1px solid rgba(255,255,255,0.12); }
+    .trust-strip { border-top: 1px solid #ede8de; }
     .trust-divider { width: 1px; height: 16px; background: rgba(255,255,255,0.18); display: none; }
     @media (min-width: 640px) { .trust-divider { display: block; } }
 
     .why-card {
       border-radius: 8px; padding: 24px 20px;
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10);
+      background: #fff; border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05);
     }
 
     .prog-card {
@@ -95,6 +95,10 @@
     .faq-chevron { transition: transform 0.3s; flex-shrink: 0; }
     .faq-chevron.open { transform: rotate(180deg); }
 
+    .exp-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
+    .exp-body.open { max-height: 200px; padding-bottom: 16px; }
+    .exp-chevron { transition: transform 0.3s; flex-shrink: 0; }
+    .exp-chevron.open { transform: rotate(180deg); }
     #mobile-nav { display: none; }
     #mobile-nav.open { display: block; }
   </style>
@@ -151,7 +155,7 @@
 
       <h1 class="text-white leading-tight mb-6 hero-headline" style="font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; font-size: clamp(2.8rem, 5.5vw, 4.5rem); letter-spacing:-0.01em;">
         Clases de alemán en Madrid para<br />
-        <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">conquistar el idioma de la precisión y las oportunidades</em>
+        <em style="color:var(--gold); font-style:italic;">conquistar el idioma de la precisión y las oportunidades</em>
       </h1>
 
       <p class="leading-relaxed mb-5" style="font-size:1.08rem; max-width:540px; color:rgba(255,255,255,0.75); line-height:1.75;">
@@ -300,59 +304,90 @@
 <!-- ═══════════════════════════════════════
      WHAT CLASSES FEEL LIKE
 ════════════════════════════════════════ -->
-<section class="py-20 lg:py-28" style="background:var(--dark);">
+<section class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
       <div>
         <span class="section-tag">La experiencia</span>
-        <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(2rem, 4vw, 3rem);">
-          Así se siente una clase<br />de alemán <em class="hero-gold-glow" style="color:#F8E847; font-style:italic;">aquí</em>
+        <h2 class="serif font-bold leading-tight" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3rem);">
+          Así se siente una clase<br />de alemán <em style="color:var(--gold); font-style:italic;">aquí</em>
         </h2>
-        <p class="mt-5 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-5 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           Imagina entrar a clase y debatir sobre un documental de la Deutsche Welle, analizar un artículo del Spiegel o preparar una presentación profesional en alemán. No hay libro de texto como protagonista — hay contexto, opinión y práctica real.
         </p>
-        <p class="mt-4 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="mt-4 leading-relaxed text-gray-500" style="font-size:0.97rem;">
           Aquí la gramática alemana no intimida: se practica en contexto, se entiende con lógica y se domina con uso real. Sales de clase pensando en alemán, no traduciéndolo.
         </p>
       </div>
 
-      <div class="space-y-7">
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Debates y opinión en alemán</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Temas de actualidad, economía, tecnología y sociedad para que pienses y te expreses con naturalidad.</p>
+      <div class="bg-white rounded-lg" style="border: 1px solid #ede8de; box-shadow: 0 2px 8px rgba(13,19,33,0.05);">
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Debates y opinión en alemán</p>
+            </div>
+            <svg class="exp-chevron open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body open" style="padding: 0 20px 16px 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Temas de actualidad, economía, tecnología y sociedad para que pienses y te expreses con naturalidad. Desarrollarás la capacidad de argumentar y opinar con precisión, una habilidad esencial en la cultura alemana.</p>
           </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Cine y medios en versión original</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">De Fritz Lang a Dark, de Wim Wenders a podcasts actuales. Comprensión auditiva con acentos y contextos reales.</p>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Cine y medios en versión original</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">De Fritz Lang a Dark, de Wim Wenders a podcasts actuales. Comprensión auditiva con acentos y contextos reales. Cada sesión te sumerge en el alemán auténtico que escucharás en Berlín, Viena o Zúrich.</p>
           </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Comunicación profesional y académica</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Practica situaciones reales: reuniones de trabajo, emails formales, entrevistas y presentaciones en alemán.</p>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Comunicación profesional y académica</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Practica situaciones reales: reuniones de trabajo, emails formales, entrevistas y presentaciones en alemán. Ganarás la seguridad necesaria para desenvolverte en entornos profesionales germanófonos.</p>
           </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Gramática con lógica, no memorización</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Los casos, las declinaciones y la estructura del alemán tienen una lógica hermosa. Aquí la descubres practicando.</p>
+
+        <div style="border-bottom: 1px solid #ede8de;">
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Gramática con lógica, no memorización</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Los casos, las declinaciones y la estructura del alemán tienen una lógica hermosa. Aquí la descubres practicando. Entenderás el sistema gramatical como un todo coherente, no como una lista de reglas aisladas.</p>
           </div>
         </div>
-        <div class="check-item">
-          <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-          <div>
-            <p class="text-white font-semibold text-sm">Vocabulario técnico y cotidiano</p>
-            <p class="text-gray-400 text-sm mt-0.5 leading-relaxed">Desde Wirtschaft hasta Gemütlichkeit. Vocabulario profesional y cultural que realmente usarás.</p>
+
+        <div>
+          <div onclick="toggleExp(this)" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding:18px 20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div class="check-dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <p class="font-semibold text-sm" style="color:var(--dark);">Vocabulario técnico y cotidiano</p>
+            </div>
+            <svg class="exp-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="exp-body" style="padding: 0 20px 0 54px;">
+            <p class="text-gray-500 text-sm leading-relaxed">Desde Wirtschaft hasta Gemütlichkeit. Vocabulario profesional y cultural que realmente usarás. Aprenderás palabras compuestas y expresiones idiomáticas que te harán sonar natural en cualquier contexto.</p>
           </div>
         </div>
+
       </div>
 
     </div>
@@ -402,34 +437,34 @@
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="py-16 lg:py-20" style="background:var(--dark);">
+<section class="py-16 lg:py-20" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <span class="section-tag">¿Por qué nuestra academia?</span>
-      <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
+      <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem); color:var(--dark);">
         Lo que nos diferencia de otras academias de alemán en <em style="color:#F8E847; font-style:italic;">Madrid</em>
       </h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">8</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">8</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">alumnos máx. por grupo</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">No eres invisible. Tu profesor adapta cada clase a tu nivel y corrige en tiempo real.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">No eres invisible. Tu profesor adapta cada clase a tu nivel y corrige en tiempo real.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">Goethe</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">Goethe</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">preparación oficial</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Preparación Goethe-Zertifikat (A1–C2) y TestDaF con método inmersivo y resultados.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Preparación Goethe-Zertifikat (A1–C2) y TestDaF con método inmersivo y resultados.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">100%</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">100%</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">conversación real</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Hablas alemán desde el minuto uno. Nada de meses de gramática antes de abrir la boca.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Hablas alemán desde el minuto uno. Nada de meses de gramática antes de abrir la boca.</p>
       </div>
       <div class="why-card text-center" style="padding:28px 20px;">
-        <p class="serif font-bold text-2xl text-white mb-1">5.0</p>
+        <p class="serif font-bold text-2xl mb-1" style="color:var(--dark);">5.0</p>
         <p class="text-xs font-semibold mb-2" style="color:var(--gold);">valoración en Google</p>
-        <p style="color:rgba(255,255,255,0.50); font-size:0.82rem; line-height:1.6;">Nuestros alumnos nos recomiendan. Lee sus opiniones reales.</p>
+        <p class="text-gray-500" style="font-size:0.82rem; line-height:1.6;">Nuestros alumnos nos recomiendan. Lee sus opiniones reales.</p>
       </div>
     </div>
   </div>
@@ -527,29 +562,29 @@
 <!-- ═══════════════════════════════════════
      FINAL CTA
 ════════════════════════════════════════ -->
-<section id="contacto" class="py-20 lg:py-28" style="background:var(--dark);">
+<section id="contacto" class="py-20 lg:py-28" style="background:var(--cream);">
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
       <div>
         <span class="section-tag" style="color:var(--gold);">¿Listo para empezar?</span>
-        <h2 class="serif font-bold text-white leading-tight mb-5" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+        <h2 class="serif font-bold leading-tight mb-5" style="color:var(--dark); font-size: clamp(2rem, 4vw, 3.2rem);">
           Tu próximo paso en<br />alemán empieza <em style="color:var(--gold); font-style:italic;">aquí</em>
         </h2>
-        <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.65); font-size:0.97rem;">
+        <p class="leading-relaxed mb-8 text-gray-500" style="font-size:0.97rem;">
           Cuéntanos tu nivel, tus objetivos y qué te motiva a aprender alemán. Te contactamos en menos de 24 horas con un plan personalizado — ya sea para tu carrera, tus estudios o tu pasión por la cultura germánica.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="mailto:info@muchomasqueidiomas.com" class="btn-gold" style="font-size:0.95rem; padding:13px 28px;">Reserva tu clase de prueba</a>
-          <a href="index.html#idiomas" class="btn-gold-outline">Ver todos los idiomas</a>
+          <a href="index.html#idiomas" class="btn-gold-outline" style="color:var(--dark); border-color:var(--dark); opacity:0.7;">Ver todos los idiomas</a>
         </div>
-        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid rgba(255,255,255,0.12);">
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);"><span class="text-white font-semibold">info@muchomasqueidiomas.com</span></div>
-          <div class="text-sm" style="color:rgba(255,255,255,0.60);"><span class="text-white font-semibold">+34 603 85 92 06</span></div>
+        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 pt-6" style="border-top: 1px solid #ede8de;">
+          <div class="text-sm text-gray-500"><span class="font-semibold" style="color:var(--dark);">info@muchomasqueidiomas.com</span></div>
+          <div class="text-sm text-gray-500"><span class="font-semibold" style="color:var(--dark);">+34 603 85 92 06</span></div>
         </div>
       </div>
 
-      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 8px 40px rgba(0,0,0,0.25);">
+      <div class="bg-white rounded-xl p-8" style="box-shadow: 0 4px 24px rgba(13,19,33,0.10); border: 1px solid #ede8de;">
         <h3 class="serif font-bold text-xl mb-1" style="color:var(--dark);">Escríbenos</h3>
         <p class="text-gray-400 text-sm mb-6">Te respondemos en menos de 24 horas.</p>
         <form id="contact-form" action="https://formsubmit.co/info@muchomasqueidiomas.com" method="POST" onsubmit="handleContact(event)" novalidate>
@@ -674,6 +709,7 @@
     else { header.style.position = 'absolute'; header.style.background = 'transparent'; header.style.backdropFilter = 'none'; header.style.WebkitBackdropFilter = 'none'; header.style.borderBottom = 'none'; header.style.boxShadow = 'none'; }
   }, { passive: true });
   function toggleFaq(el) { const answer = el.nextElementSibling; const chevron = el.querySelector('.faq-chevron'); answer.classList.toggle('open'); chevron.classList.toggle('open'); }
+  function toggleExp(el) { const body = el.nextElementSibling; const chevron = el.querySelector('.exp-chevron'); body.classList.toggle('open'); chevron.classList.toggle('open'); }
 </script>
 
 <!-- Sticky mobile CTA -->
