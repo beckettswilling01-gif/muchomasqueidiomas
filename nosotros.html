@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros — El equipo de Mucho Más Que Idiomas</title>
+  <meta name="description" content="Conoce al equipo de Mucho Más Que Idiomas. Profesores nativos, formados, apasionados por su cultura y comprometidos con tu progreso." />
+  <link rel="canonical" href="https://muchomasqueidiomas.es/nosotros.html" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D1321'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23C9A227' font-family='serif' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; background: #fff; -webkit-font-smoothing: antialiased; }
+
+    :root {
+      --gold:   #F8E847;
+      --gold-lt:#FAEE6A;
+      --dark:   #0D1321;
+      --dark2:  #141C30;
+      --cream:  #F7F2E6;
+      --blue:   #1E45C2;
+    }
+
+    .serif { font-family: 'Playfair Display', Georgia, serif; }
+
+    .nav-link { color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: color 0.25s; letter-spacing: 0.01em; }
+    .nav-link:hover { color: #fff; }
+    .btn-gold {
+      background: var(--gold); color: #0D1321;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem;
+      padding: 10px 22px; border-radius: 5px; text-decoration: none; letter-spacing: 0.02em;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      display: inline-block;
+    }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(13,19,33,0.12); }
+
+    .section-tag {
+      font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase; color: #6b7280;
+      margin-bottom: 14px; display: block;
+    }
+
+    .nos-hero-overlay {
+      background:
+        linear-gradient(to right, rgba(10,15,30,0.85) 0%, rgba(10,15,30,0.55) 55%, rgba(10,15,30,0.35) 100%),
+        linear-gradient(to top, rgba(10,15,30,0.55) 0%, transparent 45%);
+    }
+
+    .teacher-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #ede8de;
+      box-shadow: 0 2px 12px rgba(13,19,33,0.06), 0 8px 28px rgba(13,19,33,0.05);
+    }
+    .teacher-photo {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+    .teacher-tag {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: #1a1a2e;
+      background: var(--gold);
+      padding: 4px 10px;
+      border-radius: 3px;
+      margin-bottom: 14px;
+    }
+
+    #mobile-nav { display: none; }
+    #mobile-nav.open { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAV
+════════════════════════════════════════ -->
+<header class="absolute top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between" style="height:72px;">
+    <a href="index.html" class="flex-shrink-0">
+      <span class="serif text-white font-bold" style="font-size:1.15rem; letter-spacing:-0.01em;">
+        Mucho más que <span style="color:var(--gold); font-style:italic;">idiomas</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="index.html#idiomas" class="nav-link">Idiomas</a>
+      <a href="index.html#programa" class="nav-link">Programa</a>
+      <a href="index.html#metodologia" class="nav-link">Metodología</a>
+      <a href="nosotros.html" class="nav-link" style="color:#fff;">Nosotros</a>
+      <a href="index.html#blog" class="nav-link">Blog</a>
+    </nav>
+
+    <a href="index.html#contacto" class="btn-gold hidden md:inline-block">Reserva tu plaza</a>
+
+    <button onclick="document.getElementById('mobile-nav').classList.toggle('open')" class="md:hidden p-2 text-white" aria-label="Menú">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-nav" style="background:var(--dark);" class="md:hidden px-6 pb-5 pt-2">
+    <nav class="flex flex-col gap-3">
+      <a href="index.html#idiomas" class="nav-link py-2 border-b border-white/10">Idiomas</a>
+      <a href="index.html#programa" class="nav-link py-2 border-b border-white/10">Programa</a>
+      <a href="index.html#metodologia" class="nav-link py-2 border-b border-white/10">Metodología</a>
+      <a href="nosotros.html" class="nav-link py-2 border-b border-white/10">Nosotros</a>
+      <a href="index.html#blog" class="nav-link py-2">Blog</a>
+    </nav>
+    <a href="index.html#contacto" class="btn-gold mt-4 text-center block">Reserva tu plaza</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="relative" style="min-height: 80vh;">
+  <div class="absolute inset-0" style="overflow:hidden;">
+    <img src="the-team.avif" alt="El equipo de Mucho Más Que Idiomas" style="width:100%; height:100%; object-fit:cover; display:block;" />
+    <div class="absolute inset-0 nos-hero-overlay"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-10 flex items-center" style="min-height:80vh; padding-top:120px; padding-bottom:80px;">
+    <div class="max-w-2xl">
+      <span class="section-tag" style="color:var(--gold);">Nosotros</span>
+      <h1 class="serif font-bold text-white leading-tight" style="font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing:-0.02em;">
+        Las personas detrás de<br />
+        <em style="color:var(--gold); font-style:italic;">tu aprendizaje</em>
+      </h1>
+      <p class="mt-6 leading-relaxed" style="color:rgba(255,255,255,0.82); font-size:1.05rem; max-width:38rem;">
+        Somos una academia pequeña por elección. Profesores nativos, formados y apasionados por su cultura — no solo enseñamos un idioma, te abrimos la puerta a una forma de pensar, vivir y conversar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     INTRO
+════════════════════════════════════════ -->
+<section class="py-16 lg:py-20" style="background:var(--cream);">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center">
+    <span class="section-tag">Nuestra filosofía</span>
+    <h2 class="serif font-bold leading-tight" style="font-size: clamp(1.7rem, 3.2vw, 2.4rem); color:var(--dark);">
+      La cultura como método,<br />
+      <em style="color:var(--dark); font-style:italic;">la persona en el centro</em>
+    </h2>
+    <p class="text-gray-600 leading-relaxed mt-6" style="font-size:1rem;">
+      Cada profesor de nuestro equipo es nativo del idioma que enseña y vive en Madrid. Comparten una misma idea: aprender un idioma no es memorizar reglas, es entender una cultura, conectar con su gente y disfrutar el proceso. Conoce a quienes te van a acompañar.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TEACHERS
+════════════════════════════════════════ -->
+<section class="py-20 lg:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-6 lg:px-10 space-y-16 lg:space-y-20">
+
+    <!-- Romina -->
+    <div class="teacher-card grid lg:grid-cols-2">
+      <div style="background:#f0ebe0;">
+        <img src="Romina.avif" alt="Romina — Directora y fundadora" class="teacher-photo" />
+      </div>
+      <div class="p-8 lg:p-12 flex flex-col justify-center">
+        <span class="teacher-tag">Directora y fundadora</span>
+        <h3 class="serif font-bold mb-2" style="font-size:1.9rem; color:var(--dark); letter-spacing:-0.01em;">Romina</h3>
+        <p class="text-sm font-semibold text-gray-500 mb-5">Profesora de italiano · Pistoia, Italia</p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Soy italiana y la culpable de que la academia que acabas de elegir exista. Nací en Pistoia y estudié filología alemana, española e inglesa, además de historia del arte, en Pisa.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Tras 8 años enseñando italiano en la Universidad de Göttingen, en 2011 me mudé a Madrid. También pasé un año en Londres con muchomasqueidiomas.com dentro del programa europeo «Erasmus para Jóvenes Emprendedores». De ahí nació la idea de una academia diferente: una en la que la cultura no fuera un complemento, sino el camino.
+        </p>
+        <p class="text-gray-600 leading-relaxed" style="font-size:0.97rem;">
+          Mi clase favorita es la que sale del aula: una visita al Prado, un paseo por Lavapiés, una mesa larga con tapas y conversación.
+        </p>
+      </div>
+    </div>
+
+    <!-- Lorenzo -->
+    <div class="teacher-card grid lg:grid-cols-2">
+      <div class="lg:order-2" style="background:#f0ebe0;">
+        <img src="lorenzo.avif" alt="Lorenzo — Profesor de italiano" class="teacher-photo" />
+      </div>
+      <div class="lg:order-1 p-8 lg:p-12 flex flex-col justify-center">
+        <span class="teacher-tag">Profesor de italiano</span>
+        <h3 class="serif font-bold mb-2" style="font-size:1.9rem; color:var(--dark); letter-spacing:-0.01em;">Lorenzo</h3>
+        <p class="text-sm font-semibold text-gray-500 mb-5">Florencia, Italia</p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          ¡Ciao! Soy de Florencia y mi apellido es Romano, así que conmigo puedes estar seguro de que aprenderás un italiano y una cultura 100% nativos. Estudié Bellas Artes y me formé para enseñar italiano a extranjeros con el título oficial DITALS.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Llevo en Madrid desde 2011 y mi objetivo en clase es claro: que mis alumnos se diviertan y disfruten aprendiendo. El italiano se aprende mejor cuando se ríe, cuando se discute apasionadamente sobre cine o cocina, cuando se descubre la historia detrás de cada palabra.
+        </p>
+        <p class="text-gray-600 leading-relaxed" style="font-size:0.97rem;">
+          Mi método: gramática justa, conversación constante y una buena dosis de cultura italiana real.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sarah -->
+    <div class="teacher-card grid lg:grid-cols-2">
+      <div style="background:#f0ebe0;">
+        <img src="sarah.avif" alt="Sarah — Profesora de francés" class="teacher-photo" />
+      </div>
+      <div class="p-8 lg:p-12 flex flex-col justify-center">
+        <span class="teacher-tag">Profesora de francés</span>
+        <h3 class="serif font-bold mb-2" style="font-size:1.9rem; color:var(--dark); letter-spacing:-0.01em;">Sarah</h3>
+        <p class="text-sm font-semibold text-gray-500 mb-5">Francia · Traductora y profesora</p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Traductora y profesora de francés desde hace más de diez años. Este doble papel me ha permitido acercarme a las lenguas desde ángulos distintos y entender mejor las dificultades y sutilezas del francés, mi lengua materna.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Conversación, gramática, cultura y actualidad: en clase abordamos todo lo que necesitas para que el francés deje de ser un idioma de libro y empiece a ser una herramienta viva. Adaptamos cada sesión a tu nivel, tu ritmo y los temas que más te interesan.
+        </p>
+        <p class="text-gray-600 leading-relaxed" style="font-size:0.97rem;">
+          Si te apasiona el cine, la literatura o simplemente quieres pedir un café en París sin tropezar, vamos a entendernos perfectamente.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mon -->
+    <div class="teacher-card grid lg:grid-cols-2">
+      <div class="lg:order-2" style="background:#f0ebe0;">
+        <img src="mon.avif" alt="Mon — Profesora de español" class="teacher-photo" />
+      </div>
+      <div class="lg:order-1 p-8 lg:p-12 flex flex-col justify-center">
+        <span class="teacher-tag">Profesora de español</span>
+        <h3 class="serif font-bold mb-2" style="font-size:1.9rem; color:var(--dark); letter-spacing:-0.01em;">Mon</h3>
+        <p class="text-sm font-semibold text-gray-500 mb-5">Galicia · Historiadora y antropóloga</p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Una gallega en Madrid: historiadora, antropóloga y profesora de español. Me emociona aprender cosas nuevas y me encantan las personas, lo que me ayuda a establecer un vínculo afectivo y de escucha con mis alumnos.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Para mí esa conexión es la base de un proceso de aprendizaje tranquilo, agradable y único para cada persona. Cada estudiante llega con una historia, unos objetivos y un ritmo distinto — mi trabajo es entenderlos y construir desde ahí.
+        </p>
+        <p class="text-gray-600 leading-relaxed" style="font-size:0.97rem;">
+          Disfruto especialmente trabajando la cultura española e iberoamericana en clase: literatura, costumbres, cine, gastronomía. Todo lo que hace que el español no sea solo un idioma sino una forma de mirar el mundo.
+        </p>
+      </div>
+    </div>
+
+    <!-- Filipa -->
+    <div class="teacher-card grid lg:grid-cols-2">
+      <div style="background:#f0ebe0;">
+        <img src="Filipa.avif" alt="Filipa — Profesora de portugués" class="teacher-photo" />
+      </div>
+      <div class="p-8 lg:p-12 flex flex-col justify-center">
+        <span class="teacher-tag">Profesora de portugués</span>
+        <h3 class="serif font-bold mb-2" style="font-size:1.9rem; color:var(--dark); letter-spacing:-0.01em;">Filipa</h3>
+        <p class="text-sm font-semibold text-gray-500 mb-5">Lisboa, Portugal</p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Portuguesa, de Lisboa, enseñando portugués desde hace más de 15 años. Me apasionan las lenguas y todas las herramientas que nos permiten comunicarnos: la palabra, el gesto, el silencio, la entonación.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Me enamoro de cada grupo nuevo. Enseñar me obliga a entrar plenamente en las expectativas de cada alumno para construir un modelo de formación a medida de sus necesidades — no hay dos clases iguales, ni dos caminos iguales.
+        </p>
+        <p class="text-gray-600 leading-relaxed" style="font-size:0.97rem;">
+          Mi clase combina conversación real, fonética cuidada y muchísima cultura: fado, literatura, cine portugués y la vida cotidiana de Lisboa.
+        </p>
+      </div>
+    </div>
+
+    <!-- Ana -->
+    <div class="teacher-card grid lg:grid-cols-2">
+      <div class="lg:order-2" style="background:#f0ebe0;">
+        <img src="Ana Branco (Profesora de Portugués)_edited.jpg.avif" alt="Ana — Profesora de portugués" class="teacher-photo" />
+      </div>
+      <div class="lg:order-1 p-8 lg:p-12 flex flex-col justify-center">
+        <span class="teacher-tag">Profesora de portugués</span>
+        <h3 class="serif font-bold mb-2" style="font-size:1.9rem; color:var(--dark); letter-spacing:-0.01em;">Ana</h3>
+        <p class="text-sm font-semibold text-gray-500 mb-5">Portugal · Arquitecta y profesora</p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Arquitecta portuguesa con un Máster por la Universidad Politécnica de Madrid. Desde 2017 enseño portugués europeo en empresas, academias y ONGs.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Desde 2020 preparo a alumnos para los exámenes oficiales de nivel. Mi trayectoria diversa enriquece mi forma de enseñar: cruzo el rigor del proyecto arquitectónico con la sensibilidad de quien sabe que cada idioma se construye, paso a paso, sobre la base de quien lo aprende.
+        </p>
+        <p class="text-gray-600 leading-relaxed" style="font-size:0.97rem;">
+          Si te interesa el portugués europeo con foco real — la fonética, los registros, la cultura urbana de Lisboa y Oporto — vamos a trabajar muy bien juntos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Laura -->
+    <div class="teacher-card grid lg:grid-cols-2">
+      <div style="background:#f0ebe0;">
+        <img src="laura.avif" alt="Laura — Profesora de inglés" class="teacher-photo" />
+      </div>
+      <div class="p-8 lg:p-12 flex flex-col justify-center">
+        <span class="teacher-tag">Profesora de inglés</span>
+        <h3 class="serif font-bold mb-2" style="font-size:1.9rem; color:var(--dark); letter-spacing:-0.01em;">Laura</h3>
+        <p class="text-sm font-semibold text-gray-500 mb-5">Hull, Yorkshire · Reino Unido</p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Originaria de Hull, en Yorkshire. He vivido en Australia y en Canadá, lo que me ha dado una perspectiva amplia y muy práctica del inglés que se habla hoy en el mundo.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4" style="font-size:0.97rem;">
+          Soy una profesora entusiasta y me apasiona conectar con mis alumnos. He visitado más de 30 países y esa experiencia ha enriquecido mi comprensión de las distintas culturas — algo que llevo a cada clase, porque enseñar no es solo transmitir conocimiento: es encontrarse con personas fascinantes.
+        </p>
+        <p class="text-gray-600 leading-relaxed" style="font-size:0.97rem;">
+          Mis clases son dinámicas, conversacionales y muy enfocadas a que ganes confianza para hablar inglés en situaciones reales — del trabajo al viaje, del email a la cena con amigos.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CTA
+════════════════════════════════════════ -->
+<section class="py-20" style="background:var(--dark);">
+  <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center">
+    <h2 class="serif font-bold text-white leading-tight" style="font-size: clamp(1.7rem, 3.2vw, 2.4rem); letter-spacing:-0.01em;">
+      Conoce a tu profesor en una<br />
+      <em style="color:var(--gold); font-style:italic;">clase de prueba</em>
+    </h2>
+    <p class="mt-5 leading-relaxed" style="color:rgba(255,255,255,0.65); font-size:1rem;">
+      Sin compromiso. Reserva tu plaza y empieza a aprender de la mano de un nativo apasionado por su cultura.
+    </p>
+    <a href="index.html#contacto" class="btn-gold mt-8" style="padding:14px 32px; font-size:0.95rem;">Reservar mi plaza →</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer style="background:#080d18;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+
+      <div class="lg:col-span-1">
+        <p class="serif font-bold text-white mb-3" style="font-size:1.1rem;">
+          Mucho más que <span style="color:var(--gold); font-style:italic;">idiomas</span>
+        </p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">Academia de idiomas en Madrid. La cultura como método, el idioma como destino.</p>
+      </div>
+
+      <div>
+        <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4">Idiomas</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Español</a></li>
+          <li><a href="index.html#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Italiano</a></li>
+          <li><a href="index.html#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Francés</a></li>
+          <li><a href="index.html#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Inglés</a></li>
+          <li><a href="index.html#idiomas" class="text-gray-400 text-sm hover:text-white transition-colors">Portugués</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4">Academia</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html#metodologia" class="text-gray-400 text-sm hover:text-white transition-colors">Metodología</a></li>
+          <li><a href="index.html#programa" class="text-gray-400 text-sm hover:text-white transition-colors">Programas</a></li>
+          <li><a href="nosotros.html" class="text-gray-400 text-sm hover:text-white transition-colors">Nosotros</a></li>
+          <li><a href="index.html#contacto" class="text-gray-400 text-sm hover:text-white transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-4">Contacto</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2">
+            <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="text-gray-400 text-sm">info@muchomasqueidiomas.com</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07A16 16 0 0015.93 17.9l1.17-1.17a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span class="text-gray-400 text-sm">+34 603 85 92 06</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="text-gray-400 text-sm">Centro de Madrid<br />28001 Madrid, España</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3" style="border-color:rgba(255,255,255,0.07);">
+      <p class="text-gray-600 text-xs">© 2026 Mucho Más Que Idiomas. Todos los derechos reservados.</p>
+      <div class="flex gap-5">
+        <a href="#" class="text-gray-600 text-xs hover:text-gray-400 transition-colors">Política de privacidad</a>
+        <a href="#" class="text-gray-600 text-xs hover:text-gray-400 transition-colors">Aviso legal</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
